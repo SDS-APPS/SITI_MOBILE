@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name" translatable="false">SITI-IPTV</string>
+    <string name="first_time_message" translatable="false">We have detected that it is the first time you are using our application and we want to correctly configure your device</string>
+    <string name="first_time_message_2" translatable="false">Can you hear this audio correctly?</string>
+
+    <string name="autorization_engineering" translatable="false">To use this function you need authorization.</string>
+    <string name="home_screen" translatable="false">Home Screen</string>
+    <string name="live_tv_screen" translatable="false">Live Tv Screen</string>
+    <string name="channel_change" translatable="false">Channel Change</string>
+    <string name="black_frame" translatable="false">Black Frame</string>
+    <string name="last_frame" translatable="false">Last Frame</string>
+    <string name="first_play" translatable="false">First Play</string>
+    <string name="last_channel_viewed" translatable="false">Last Channel Viewed</string>
+    <string name="landing_channel" translatable="false">Landing Channel</string>
+    <string name="theme" translatable="false">Theme</string>
+    <string name="leanback" translatable="false">Leanback</string>
+    <string name="original" translatable="false">Original</string>
+    <string name="language" translatable="false">Language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="min_buffer_ms" translatable="false">Min Buffer Ms</string>
+    <string name="buffer_settings" translatable="false">Buffer Settings</string>
+    <string name="max_buffer_ms" translatable="false">Max Buffer Ms</string>
+    <string name="buffer_for_playback_ms" translatable="false">Buffer for Playback Ms</string>
+    <string name="buffer_for_playback_after_rebuffer_ms" translatable="false">Buffer for playback after Rebuffer ms</string>
+    <string name="save" translatable="false">SAVE</string>
+    <string name="system_information" translatable="false">System information</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="validity" translatable="false">Validity</string>
+    <string name="app_version" translatable="false">App version</string>
+    <string name="app_version_number" translatable="false">32</string>
+    <string name="android_version" translatable="false">Android Version</string>
+    <string name="ram" translatable="false">Ram</string>
+    <string name="storage" translatable="false">Storage</string>
+    <string name="ota" translatable="false">OTA</string>
+    <string name="lasted" translatable="false">Lasted</string>
+    <string name="stb_model" translatable="false">STB Model</string>
+    <string name="network_id" translatable="false">Network Id</string>
+    <string name="network_name" translatable="false">Network Name</string>
+    <string name="drm_id" translatable="false">DRM ID</string>
+    <string name="drm_id_number" translatable="false">9005</string>
+    <string name="drm_version" translatable="false">DRM VERSION</string>
+    <string name="for_assistance_please_contact" translatable="false">For Assistance Please Contact</string>
+    <string name="assistant_number" translatable="false">+91 022-4888888</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="bootup" translatable="false">Boot up</string>
+    <string name="unicast" translatable="false">UNICAST</string>
+    <string name="multicast" translatable="false">MULTICAST</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="go" translatable="false">GO</string>
+    <string name="sds_player" translatable="false">SDS Player</string>
+    <string name="exoplayer" translatable="false">ExoPlayer</string>
+    <string name="hw_a_v_sync" translatable="false">HW A/V Sync</string>
+    <string name="save_settings" translatable="false">Save Settings</string>
+    <string name="select_server" translatable="false">Select Server</string>
+    <string name="select_uid" translatable="false">Select UID</string>
+    <string name="login_failed" translatable="false">Login Failed !</string>
+    <string name="logout_success" translatable="false">Logout Successful</string>
+    <string name="login_success" translatable="false">Login Successful</string>
+    <string name="sync_packages" translatable="false">Syncing packages</string>
+    <string name="refresh" translatable="false">App Refreshing</string>
+    <string name="force_logout" translatable="false">Force Logout</string>
+    <string name="invalid_channel" translatable="false">Invalid Channel</string>
+    <string name="channel_not_subscribed" translatable="false">Channel not subscribed</string>
+    <string name="buffer_changed" translatable="false">The buffer configuration has been changed successfully</string>
+    <string name="mode_change_in_full_screen" translatable="false">Mode change in full screen</string>
+    <string name="category_view" translatable="false">Category View</string>
+    <string name="button_up_down" translatable="false">Button Up / Down</string>
+    <string name="density" translatable="false">Density</string>
+    <string name="please_check_your_signal" translatable="false">Please check your signal</string>
+
+
+    <string name="no_information_available" translatable="false">No information available.</string>
+    <string name="loading_info_live" translatable="false">Loading</string>
+    <string name="no_information_available_hour" translatable="false">00:00 - 00:00</string>
+    <string name="select_stream">Select Stream</string>
+    <string name="stb_model_value_lripl">LRIPL 2G16</string>
+    <string name="network_name_value">Panmetro Convergence Pvt Ltd</string>
+    <string name="drm_version_value">2024.01</string>
+    <string name="mac_id">MAC ID</string>
+    <string name="audit_mode">Audit Mode</string>
+    <string name="use_arrows">\"Use arrows when this screen appears\"</string>
+    <string name="channel_temporarily_unavailable">This channel is temporarily not available</string>
+    <string name="channel_settings">Channel Settings</string>
+
+</resources>

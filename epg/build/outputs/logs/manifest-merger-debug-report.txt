@@ -1,0 +1,51 @@
+-- Merging decision tree log ---
+manifest
+<<<<<<< HEAD
+ADDED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:1-2:50
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:1-2:50
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:1-2:50
+	package
+		ADDED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:2:5-47
+		INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		ADDED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		ADDED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		INJECTED from /home/sdsiptv/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+=======
+ADDED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:1-2:50
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:1-2:50
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:1-2:50
+	package
+		ADDED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:2:5-47
+		INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		ADDED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		ADDED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+		INJECTED from /home/x3x0x/StudioProjects/android-epg/epg/src/main/AndroidManifest.xml
+>>>>>>> 26044b565d62e2cf5f4d56ec3ec13e9b48b7a99c

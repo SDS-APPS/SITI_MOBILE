@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvSizeInfoFirstTime">18sp</dimen>
+    <dimen name="height_image_first_time">180dp</dimen>
+    <dimen name="tv_size_radio_button_first">10sp</dimen>
+    <dimen name="padding_dialog">20dp</dimen>
+    <dimen name="padding_title_first_dialog">20dp</dimen>
+    <dimen name="padding_btn_first">10dp</dimen>
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/margin_horizontal_info_live"
+    android:layout_marginEnd="@dimen/margin_horizontal_info_live"
+    android:gravity="center_horizontal"
+    android:weightSum="1"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/containerChannelBox"
+            layout="@layout/info_live_current_channel_box"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"/>
+        <include
+            android:id="@+id/containerCurrentDateView"
+            layout="@layout/info_live_current_date_view"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/background_info_live_date"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.47"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/info_live_height">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:id="@+id/ivInfoLiveChannelLogo"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <include layout="@layout/info_live_current_program_box"/>
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"/>
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/tv_info_live_hour_current_program"
+                            android:layout_marginStart="3dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/inter_medium"
+                            tools:text="12:00pm - 04:00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:id="@+id/tv_info_live_name_current_program"
+                        android:textSize="26sp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        tools:text="Super Singer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/info_live_common_margin_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="0.53"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/info_live_height">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/info_live_common_margin_vertical"
+                android:paddingStart="@dimen/info_live_padding_views"
+                android:paddingEnd="@dimen/info_live_padding_views"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/white"
+                        android:text="UP COMING SHOW"
+                        android:background="@drawable/upcoming_show_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_gravity="top"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/inter_semibold"
+                        android:gravity="end"
+                        android:text="Press OK to display this box"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_info_live_hour_next_program"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginStart="@dimen/info_live_common_horizontal_margin_items"
+                        android:fontFamily="@font/inter_medium"
+                        android:textSize="18sp"
+                        android:gravity="start"
+                        android:textColor="@color/white"
+                        android:text="@string/no_information_available_hour"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:background="@color/white"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_info_live_name_next_program"
+                        android:layout_marginStart="10dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="0.6"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textSize="19sp"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/white"
+                        android:text="@string/loading_info_live"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_info_live_hour_next2_program"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginStart="@dimen/info_live_common_horizontal_margin_items"
+                        android:fontFamily="@font/inter_medium"
+                        android:textSize="18sp"
+                        android:gravity="start"
+                        android:textColor="@color/white"
+                        android:text="@string/no_information_available_hour"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:background="@color/white"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_info_live_name_next2_program"
+                        android:layout_marginStart="10dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="0.6"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textSize="19sp"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/white"
+                        android:text="@string/loading_info_live"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/info_live_genre_and_epg_container"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <include
+            android:id="@+id/infoLiveButtonsCatchupContainer"
+            layout="@layout/info_live_buttons_catchup"/>
+        <TextView
+            android:id="@+id/tvLatency"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            tools:text="25ms"
+            android:background="@drawable/background_info_live_date"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivCathupKeys"
+            android:background="@drawable/info_live_catchup"
+            android:layout_width="260dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

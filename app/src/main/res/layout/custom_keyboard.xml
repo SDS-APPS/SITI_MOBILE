@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtChannel"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:background="@drawable/background_keyboard"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:maxLength="4"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChannelSuggestions"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/background_keyboard"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtChannel"
+        tools:listitem="@layout/item_channel_suggestion" />
+
+    <ProgressBar
+        android:id="@+id/channelProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="-2dp"
+        android:max="100"
+        android:progressTint="#43C7F2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/edtChannel"
+        app:layout_constraintEnd_toEndOf="@+id/edtChannel"
+        app:layout_constraintStart_toStartOf="@+id/edtChannel" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerCustomKeyboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:cardBackgroundColor="#333"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <GridLayout
+            android:id="@+id/keyboardGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alignmentMode="alignMargins"
+            android:background="@color/transparent"
+            android:columnCount="10"
+            android:rowCount="4" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

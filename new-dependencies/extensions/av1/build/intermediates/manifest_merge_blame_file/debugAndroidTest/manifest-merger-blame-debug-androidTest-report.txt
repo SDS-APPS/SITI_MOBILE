@@ -1,0 +1,39 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.google.android.exoplayer2.ext.av1.test" >
+4
+5    <uses-sdk
+5-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:5:5-74
+6        android:minSdkVersion="16"
+6-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:5:15-41
+7        android:targetSdkVersion="30" />
+7-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:11:5-15:92
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:11:22-76
+11        android:functionalTest="false"
+11-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:13:22-53
+13        android:label="Tests for com.google.android.exoplayer2.ext.av1.test"
+13-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:15:22-90
+14        android:targetPackage="com.google.android.exoplayer2.ext.av1.test" />
+14-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:12:22-88
+15
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[:exoplayer-library-core] /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:5-79
+16-->[:exoplayer-library-core] /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:22-76
+17
+18    <application
+18-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:7:5-9:19
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.7.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/03c8169a8dff0a36c47ab8588a94be42/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true" >
+21        <uses-library android:name="android.test.runner" />
+21-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:8:9-60
+21-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5745259742554858968.xml:8:23-57
+22    </application>
+23
+24</manifest>

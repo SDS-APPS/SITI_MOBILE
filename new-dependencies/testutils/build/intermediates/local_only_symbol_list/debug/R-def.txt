@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+id overlay_frame_layout
+id root
+id surface_view
+layout exo_testutils_host_activity

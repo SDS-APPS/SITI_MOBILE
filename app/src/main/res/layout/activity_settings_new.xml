@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_background_d"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_weight="@dimen/default_weight_spacer_settings"
+            android:layout_width="1dp"
+            android:layout_height="0dp"/>
+
+        <FrameLayout
+            android:id="@+id/settingsButtonsContainer"
+            android:focusable="false"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="@dimen/default_margin_settings"
+            android:layout_marginTop="@dimen/default_margin_settings"
+            android:layout_weight="@dimen/default_weight_settings_space"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <include layout="@layout/activity_settings_content"/>
+
+        </FrameLayout>
+
+        <View
+            android:layout_weight="0.05"
+            android:layout_width="1dp"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerInfoDialog"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/includeInfoDialog"
+            layout="@layout/info_dialog"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerSelectPlayer"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/select_player"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerMoreSettings"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/dialog_more_settings"/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerDialogEngineering"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/engineering_menu"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerEngineeringPassInput"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/engineering_pass_input"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerSelectTypeEngineering"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/dialog_enginering"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:background="@drawable/background_alert_update"
+        android:id="@+id/containerDialogChannelsView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/fingerprint_layout"/>
+
+</FrameLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/fingerprintFakeLaker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/safe_margin_top"
+            android:layout_marginEnd="@dimen/safe_margin_end"
+            android:layout_marginBottom="@dimen/safe_margin_bottom"
+            android:layout_marginStart="@dimen/safe_margin_start"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:translationZ="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fingerprintTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@color/colorOrange"
+            android:translationZ="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/fingerprintGuidelineX"
+            app:layout_constraintEnd_toStartOf="@+id/fingerprintGuidelineY"
+            app:layout_constraintStart_toStartOf="@+id/fingerprintGuidelineY"
+            app:layout_constraintTop_toTopOf="@+id/fingerprintGuidelineX" />
+
+        <ImageView
+            android:alpha="0"
+            android:id="@+id/fingerprintForensic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="TextView"
+            android:textColor="@color/colorOrange"
+            android:translationZ="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/fingerprintGuidelineX"
+            app:layout_constraintEnd_toStartOf="@+id/fingerprintGuidelineY"
+            app:layout_constraintStart_toStartOf="@+id/fingerprintGuidelineY"
+            app:layout_constraintTop_toTopOf="@+id/fingerprintGuidelineX" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fingerprintGuidelineY"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.22871046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fingerprintGuidelineX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.22871046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

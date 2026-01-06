@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/drawable-anydpi-v21/ic_checked_checkbox.xml",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-mediarouter-1.2.2-1:/drawable-anydpi-v21/ic_checked_checkbox.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/drawable-anydpi-v21/ic_vol_unmute.xml",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-mediarouter-1.2.2-1:/drawable-anydpi-v21/ic_vol_unmute.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/drawable-anydpi-v21/ic_vol_mute.xml",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-mediarouter-1.2.2-1:/drawable-anydpi-v21/ic_vol_mute.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/drawable-anydpi-v21/ic_unchecked_checkbox.xml",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-mediarouter-1.2.2-1:/drawable-anydpi-v21/ic_unchecked_checkbox.xml"
+    }
+]

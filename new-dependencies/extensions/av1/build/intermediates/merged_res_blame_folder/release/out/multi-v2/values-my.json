@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-mergeReleaseResources-5:/values-my/values-my.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/03c8169a8dff0a36c47ab8588a94be42/transformed/core-1.7.0/res/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "775",
+                        "endColumns": "100",
+                        "endOffsets": "871"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/packaged_res/release/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,130,202,275,344,426,501,602,697",
+                        "endColumns": "74,71,72,68,81,74,100,94,77",
+                        "endOffsets": "125,197,270,339,421,496,597,692,770"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/values-my/values-my.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/03c8169a8dff0a36c47ab8588a94be42/transformed/core-1.7.0/res/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "775",
+                        "endColumns": "100",
+                        "endOffsets": "871"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/packaged_res/release/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,130,202,275,344,426,501,602,697",
+                        "endColumns": "74,71,72,68,81,74,100,94,77",
+                        "endOffsets": "125,197,270,339,421,496,597,692,770"
+                    }
+                }
+            ]
+        }
+    ]
+}

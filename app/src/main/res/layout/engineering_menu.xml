@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/buffer_settings"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:focusable="true"
+                android:id="@+id/btnRestore"
+                android:src="@drawable/ic_restore"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/margin_buffer_config"
+            android:layout_marginEnd="@dimen/margin_buffer_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:focusedByDefault="true"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_top_buffer_settings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:nextFocusUp="@id/btnRestore"
+                    android:nextFocusRight="@id/etMaxBuffer"
+                    android:nextFocusDown="@id/etBufferForPlayback"
+                    android:id="@+id/etMinBuffer"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="@string/min_buffer_ms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="1dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_top_buffer_settings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:nextFocusUp="@id/btnRestore"
+                    android:nextFocusRight="@id/btnRestore"
+                    android:nextFocusDown="@id/etBufferForPlaybackAfterRebuffer"
+                    android:nextFocusLeft="@id/etMinBuffer"
+                    android:id="@+id/etMaxBuffer"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="@string/max_buffer_ms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/margin_buffer_config"
+            android:layout_marginEnd="@dimen/margin_buffer_config"
+            android:layout_marginTop="@dimen/margin_top_buffer_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:nextFocusDown="@id/btnSave"
+                    android:nextFocusUp="@id/etMinBuffer"
+                    android:nextFocusRight="@id/etBufferForPlaybackAfterRebuffer"
+                    android:id="@+id/etBufferForPlayback"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="@string/buffer_for_playback_ms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="1dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:nextFocusLeft="@id/etBufferForPlayback"
+                    android:nextFocusUp="@id/etMaxBuffer"
+                    android:nextFocusDown="@id/btnSave"
+                    android:id="@+id/etBufferForPlaybackAfterRebuffer"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="@string/buffer_for_playback_after_rebuffer_ms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:id="@+id/btnSave"
+            android:focusable="true"
+            android:background="@drawable/btn_selector"
+            android:layout_marginStart="@dimen/margin_btn_save_buffer_settings"
+            android:layout_marginEnd="@dimen/margin_btn_save_buffer_settings"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

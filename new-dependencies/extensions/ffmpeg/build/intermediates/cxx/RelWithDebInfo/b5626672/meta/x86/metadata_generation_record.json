@@ -1,0 +1,184 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 16 min SDK version: x86",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -624712590
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON /Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86/android_gradle_build.json due to:",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -538373391
+  },
+  {
+    "level_": 0,
+    "message_": "- expected json /Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86/android_gradle_build.json file is not present, will remove stale json folder",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 432138959
+  },
+  {
+    "level_": 0,
+    "message_": "- missing previous command file /Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86/metadata_generation_command.txt, will remove stale json folder",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1713264205
+  },
+  {
+    "level_": 0,
+    "message_": "- command changed from previous, will remove stale json folder",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 2012379756
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86\u0027",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1759289316
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86\u0027",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1267366256
+  },
+  {
+    "level_": 0,
+    "message_": "executing cmake Executable : /opt/homebrew/bin/cmake\narguments : \n-H/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_SYSTEM_VERSION\u003d16\n-DANDROID_PLATFORM\u003dandroid-16\n-DANDROID_ABI\u003dx86\n-DCMAKE_ANDROID_ARCH_ABI\u003dx86\n-DANDROID_NDK\u003d/Users/x3x0x/Library/Android/sdk/ndk/21.4.7075529\n-DCMAKE_ANDROID_NDK\u003d/Users/x3x0x/Library/Android/sdk/ndk/21.4.7075529\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/x3x0x/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/opt/homebrew/bin/ninja\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/build/intermediates/cxx/RelWithDebInfo/b5626672/obj/x86\n-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/build/intermediates/cxx/RelWithDebInfo/b5626672/obj/x86\n-DCMAKE_BUILD_TYPE\u003dRelWithDebInfo\n-B/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86\n-GNinja\njvmArgs : \n\n",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 704037535
+  },
+  {
+    "level_": 0,
+    "message_": "Executable : /opt/homebrew/bin/cmake\narguments : \n-H/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_SYSTEM_VERSION\u003d16\n-DANDROID_PLATFORM\u003dandroid-16\n-DANDROID_ABI\u003dx86\n-DCMAKE_ANDROID_ARCH_ABI\u003dx86\n-DANDROID_NDK\u003d/Users/x3x0x/Library/Android/sdk/ndk/21.4.7075529\n-DCMAKE_ANDROID_NDK\u003d/Users/x3x0x/Library/Android/sdk/ndk/21.4.7075529\n-DCMAKE_TOOLCHAIN_FILE\u003d/Users/x3x0x/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003d/opt/homebrew/bin/ninja\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/build/intermediates/cxx/RelWithDebInfo/b5626672/obj/x86\n-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/build/intermediates/cxx/RelWithDebInfo/b5626672/obj/x86\n-DCMAKE_BUILD_TYPE\u003dRelWithDebInfo\n-B/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86\n-GNinja\njvmArgs : \n\n",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1141381410
+  },
+  {
+    "level_": 0,
+    "message_": "Exiting generation of /Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86/compile_commands.json.bin normally",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1320310987
+  },
+  {
+    "level_": 0,
+    "message_": "done executing cmake",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1700033505
+  },
+  {
+    "level_": 0,
+    "message_": "write command file /Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/x86/metadata_generation_command.txt",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 197879803
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed without problems",
+    "file_": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -656860707
+  }
+]

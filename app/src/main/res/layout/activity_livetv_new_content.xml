@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_weight="0.24"
+        android:layout_width="0dp"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/categories_rectangle_background"
+        android:layout_weight="0.28"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:background="@drawable/categories_arrows_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/container_arrows_height">
+
+            <ImageView
+                android:src="@drawable/arrow_up"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/width_arrows_channels"
+                android:layout_height="@dimen/height_arrows_channels"/>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChannelsLiveTv"
+            android:layout_marginBottom="@dimen/common_categories_rv_margin_vertical"
+            android:layout_marginTop="@dimen/common_categories_rv_margin_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <FrameLayout
+            android:background="@drawable/categories_arrows_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/container_arrows_height">
+
+            <ImageView
+                android:src="@drawable/arrow_down"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/width_arrows_channels"
+                android:layout_height="@dimen/height_arrows_channels"/>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_weight="0.48"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_weight="0.6"
+            android:background="@drawable/home_preview_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <include
+                android:id="@+id/containerPLayerPreview"
+                layout="@layout/player_preview"/>
+            <include layout="@layout/channel_container_logo_full_screen"/>
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="20dp"
+            android:layout_weight="0.4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <include
+                android:id="@+id/contentAdvertisements"
+                layout="@layout/advertisment_imageviews"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

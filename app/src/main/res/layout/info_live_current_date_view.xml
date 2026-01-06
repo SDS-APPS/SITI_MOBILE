@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/background_info_live_date"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/tvCurrentHour"
+        tools:text="15:55"
+        android:textColor="@color/white"
+        android:textSize="23.8sp"
+        android:format12Hour="HH:mm"
+        android:format24Hour="HH:mm"
+        android:fontFamily="@font/inter_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <View
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:background="#ffffff"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/tvCurrentDate"
+        tools:text="01 Sep"
+        android:textColor="@color/white"
+        android:textSize="15.3sp"
+        android:format12Hour="dd-MMM"
+        android:format24Hour="dd-MMM"
+        android:fontFamily="@font/inter_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

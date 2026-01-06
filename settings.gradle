@@ -1,0 +1,25 @@
+rootProject.name='SITI MOBILE'
+include ':app'
+include ':new-dependencies'
+include ':media'
+include ':epg_library'
+
+
+//include ':media3-lib-exoplayer'
+//include 'media3-lib-exoplayer-dash'
+//include ':media3-lib-ui'
+
+
+//gradle.ext.exoplayerRoot = '/mnt/VM/Freelancer/EXO-PLAYER/ExoPlayer'
+//gradle.ext.exoplayerRoot = '/Users/suresh/Desktop/Iptv/new-dependencies'
+//gradle.ext.exoplayerRoot = '/home/suresh/Desktop/IPTV/MobileApp/dependencies'
+//gradle.ext.exoplayerRoot = '/home/x3x0x/StudioProjects/android-epg/new-dependencies'
+//gradle.ext.exoplayerRoot = '/Users/x3x0x/StudioProjects/sds-iptv/media'
+
+
+gradle.ext.androidxMediaEnableMidiModule = true
+gradle.ext.androidxMediaModulePrefix = 'media3-'
+apply from: file("/home/sds-iptv/Documents/Vishnu/Projects/SITI TV/core_settings.gradle")
+//gradle.ext.exoplayerModulePrefix = 'exoplayer-'
+//apply from: new File(gradle.ext.exoplayerRoot, 'core_settings.gradle')
+//include ':epg_library'

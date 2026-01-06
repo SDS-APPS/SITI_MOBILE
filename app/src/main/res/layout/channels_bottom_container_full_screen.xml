@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="6dp"
+    android:background="@drawable/background_bottom_items_cat_and_channels_view"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/background_bottom_items_cat_and_channels_view"
+        android:src="@drawable/icon_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:textColor="@color/white"
+        android:text="Move"
+        android:fontFamily="@font/inter_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="14dp"
+        android:background="@color/white"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_bold"
+        android:text="OK"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/background_bottom_items_cat_and_channels_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/inter_bold"
+        android:textColor="@color/white"
+        android:text="Select"
+        android:layout_marginStart="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="14dp"
+        android:background="@color/white"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_bold"
+        android:text="BACK"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/background_bottom_items_cat_and_channels_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/inter_bold"
+        android:textColor="@color/white"
+        android:text="Previous Menu"
+        android:layout_marginStart="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="14dp"
+        android:background="@color/white"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/view_more_background_blue"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:visibility="gone"
+        android:background="@drawable/background_bottom_items_cat_and_channels_view"
+        android:fontFamily="@font/inter_bold"
+        android:textColor="@color/white"
+        android:text="HOLD OK"
+        android:layout_marginStart="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginLeft="6dp"
+        android:fontFamily="@font/inter_bold"
+        android:textColor="@color/white"
+        android:text="PRESS HOLD OK TO FAV"
+        android:layout_marginStart="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

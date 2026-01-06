@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="45dp"
+    android:paddingEnd="45dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/white_box_circled_background"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="Stream Type: "
+            android:theme="@style/AutoCompleteTextViewCustomStyle"
+            android:fontFamily="@font/inter_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:focusable="false"
+            android:background="@drawable/background_login_fields"
+            android:theme="@style/LoginTextInputAutoCompleteLayout"
+            app:hintTextColor="@color/colorWhite">
+
+            <AutoCompleteTextView
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#ffffff"
+                android:theme="@style/AutoCompleteTextViewCustomStyle"
+                android:id="@+id/filled_exposed_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:dropDownHeight="wrap_content"
+                android:clickable="false"
+                android:editable="false"
+                android:foregroundTint="#00ffffff"
+                android:focusable="false"
+                android:fontFamily="@font/inter_bold"
+                android:hint="@string/select_stream"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/tvSizeLoginFields" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/btnSave"
+        android:focusable="true"
+        android:background="@drawable/btn_selector"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

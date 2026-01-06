@@ -1,0 +1,1 @@
+/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt

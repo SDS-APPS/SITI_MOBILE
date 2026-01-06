@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo transparente del ProgressBar -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFF" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <!-- Progreso del ProgressBar -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="#8C5EA6"
+                    android:endColor="#E54D78"
+                    android:angle="0" />
+                <corners android:radius="10dp" />
+                <stroke
+                    android:width="2dp"
+                    android:color="#FFFFFF" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/drawable/notification_icon_background.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/drawable/notification_bg_low.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/drawable/notification_bg.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/drawable/notification_tile_bg.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/drawable/notification_tile_bg.xml"
+    }
+]

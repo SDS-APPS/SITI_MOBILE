@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:16:1-18:12
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:16:1-18:12
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:16:1-18:12
+	package
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:16:11-59
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:16:1-18:12
+uses-sdk
+ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+	android:targetSdkVersion
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml:17:3-14
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cast/src/main/AndroidManifest.xml

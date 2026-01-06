@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1"
+    name=":exoplayer-extension-av1"
+    type="LIBRARY"
+    maven="SDS IPTV:exoplayer-extension-av1:"
+    gradle="7.2.1"
+    buildFolder="build"
+    bootClassPath="/Users/manikandanrajendran/Library/Android/sdk/platforms/android-31/android.jar:/Users/manikandanrajendran/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-31"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

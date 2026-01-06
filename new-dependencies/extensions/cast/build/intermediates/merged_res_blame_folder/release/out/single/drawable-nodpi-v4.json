@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/drawable-nodpi-v4/cast_album_art_placeholder.png",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-jetified-play-services-cast-framework-21.0.1-7:/drawable-nodpi-v4/cast_album_art_placeholder.png"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/drawable-nodpi-v4/cast_album_art_placeholder_large.png",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-jetified-play-services-cast-framework-21.0.1-7:/drawable-nodpi-v4/cast_album_art_placeholder_large.png"
+    }
+]

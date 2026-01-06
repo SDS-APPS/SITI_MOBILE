@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/values-sw720dp-v13/values-sw720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/17d8b562ac59ea51c610bea1b2588855/transformed/mediarouter-1.2.2/res/values-sw720dp-v13/values-sw720dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,124",
+                        "endColumns": "68,68",
+                        "endOffsets": "119,188"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-mergeReleaseResources-12:/values-sw720dp-v13/values-sw720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/17d8b562ac59ea51c610bea1b2588855/transformed/mediarouter-1.2.2/res/values-sw720dp-v13/values-sw720dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,124",
+                        "endColumns": "68,68",
+                        "endOffsets": "119,188"
+                    }
+                }
+            ]
+        }
+    ]
+}

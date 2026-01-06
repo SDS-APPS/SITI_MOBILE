@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/menu/example_menu2.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/menu/example_menu2.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/menu/example_menu.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/menu/example_menu.xml"
+    }
+]

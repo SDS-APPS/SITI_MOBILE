@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/controllerIV"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/footer_controller_player"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/channelCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DA000000"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/controllerIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/icon_siti_tv_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/btnChannelSettings"
+            android:layout_width="@dimen/width_channel_button_controller"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_buttons_controller_player_background"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusRight="@id/btnChannelEpg"
+            android:nextFocusUp="@id/tvFavourite"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnChannelEpg"
+            app:layout_constraintStart_toEndOf="@+id/iconImg"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_buttons_controller"
+                android:layout_height="@dimen/icon_size_buttons_controller"
+                android:src="@drawable/icon_controller_channel_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:text="Channel\nSettings"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnChannelEpg"
+            android:layout_width="@dimen/width_channel_button_controller"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_buttons_controller_player_background"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusLeft="@id/btnChannelSettings"
+            android:nextFocusRight="@id/btnMyAccount"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnMyAccount"
+            app:layout_constraintStart_toEndOf="@+id/btnChannelSettings"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_buttons_controller"
+                android:layout_height="@dimen/icon_size_buttons_controller"
+                android:src="@drawable/icon_controller_channel_epg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:text="Channel\nEpg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnMyAccount"
+            android:layout_width="@dimen/width_channel_button_controller"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_buttons_controller_player_background"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusLeft="@id/btnChannelEpg"
+            android:nextFocusRight="@id/btnSettings"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSettings"
+            app:layout_constraintStart_toEndOf="@+id/btnChannelEpg"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_buttons_controller"
+                android:layout_height="@dimen/icon_size_buttons_controller"
+                android:src="@drawable/icon_controller_my_account" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:text="My\nAccount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnSettings"
+            android:layout_width="@dimen/width_channel_button_controller"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_buttons_controller_player_background"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusLeft="@id/btnMyAccount"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnMyAccount"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_buttons_controller"
+                android:layout_height="@dimen/icon_size_buttons_controller"
+                android:src="@drawable/icon_controller_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/containerChannelSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/background_controller_channels_and_cats"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/channelCL"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/tvAllChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/selector_buttons_controller_cat_channels"
+            android:focusable="true"
+            android:nextFocusDown="@id/tvGenre">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="@dimen/width_buttons_controller_cat"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_buttons_controller_cat"
+                android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                android:text="All Channel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tvGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_buttons_controller_cat_channels"
+                android:focusable="true"
+                android:nextFocusUp="@id/tvAllChannel"
+                android:nextFocusDown="@id/tvFavourite">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:width="@dimen/width_buttons_controller_cat"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_buttons_controller_cat"
+                    android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                    android:text="Genre"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_buttons_controller_cat_channels"
+            android:focusable="true"
+            android:nextFocusUp="@id/tvGenre"
+            android:nextFocusDown="@id/btnChannelSettings">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="@dimen/width_buttons_controller_cat"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_buttons_controller_cat"
+                android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                android:text="Favourite"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/background_controller_channels_and_cats"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/channelCL"
+        app:layout_constraintEnd_toStartOf="@+id/containerSettings">
+
+        <LinearLayout
+            android:id="@+id/tvUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_buttons_controller_cat_channels"
+            android:focusable="true"
+            android:nextFocusDown="@id/tvAllChannel">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="@dimen/width_buttons_controller_cat"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_buttons_controller_cat"
+                android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                android:text="User Info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/background_controller_channels_and_cats"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/channelCL"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tvSystemInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_buttons_controller_cat_channels"
+                android:focusable="true"
+                android:nextFocusDown="@id/tvMoreSettings">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="@dimen/width_buttons_controller_cat"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_buttons_controller_cat"
+                    android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                    android:text="System Info"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tvMoreSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_buttons_controller_cat_channels"
+            android:focusable="true"
+            android:nextFocusUp="@id/tvSystemInfo"
+            android:nextFocusDown="@id/tvLogout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="@dimen/width_buttons_controller_cat"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_buttons_controller_cat"
+                android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                android:text="More Settings"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_buttons_controller_cat_channels"
+            android:focusable="true"
+            android:nextFocusUp="@id/tvMoreSettings">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="@dimen/width_buttons_controller_cat"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_buttons_controller_cat"
+                android:paddingBottom="@dimen/padding_buttons_controller_cat"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_buttons_controller_cat" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/9b0af48e2bb5fb04a041112c78f77fd3/transformed/appcompat-1.1.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/c8690fcdfd6f4d3767e54d90b6286abd/transformed/jetified-play-services-cast-framework-21.0.1/res/values-land/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9",
+                        "startColumns": "0,0,0,0,0,0",
+                        "startOffsets": "183,264,344,414,483,578",
+                        "endColumns": "80,79,69,68,94,90",
+                        "endOffsets": "263,343,413,482,577,668"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "264,349,433,507,580,679",
+                        "endColumns": "84,83,73,72,98,94",
+                        "endOffsets": "344,428,502,575,674,769"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/17d8b562ac59ea51c610bea1b2588855/transformed/mediarouter-1.2.2/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,130,208",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "125,203,278"
+                    },
+                    "to": {
+                        "startLines": "11,12,13",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "774,849,927",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "844,922,997"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-mergeReleaseResources-12:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/9b0af48e2bb5fb04a041112c78f77fd3/transformed/appcompat-1.1.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/c8690fcdfd6f4d3767e54d90b6286abd/transformed/jetified-play-services-cast-framework-21.0.1/res/values-land/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9",
+                        "startColumns": "0,0,0,0,0,0",
+                        "startOffsets": "183,264,344,414,483,578",
+                        "endColumns": "80,79,69,68,94,90",
+                        "endOffsets": "263,343,413,482,577,668"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "264,349,433,507,580,679",
+                        "endColumns": "84,83,73,72,98,94",
+                        "endOffsets": "344,428,502,575,674,769"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/17d8b562ac59ea51c610bea1b2588855/transformed/mediarouter-1.2.2/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,130,208",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "125,203,278"
+                    },
+                    "to": {
+                        "startLines": "11,12,13",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "774,849,927",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "844,922,997"
+                    }
+                }
+            ]
+        }
+    ]
+}

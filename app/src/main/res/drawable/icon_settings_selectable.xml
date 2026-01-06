@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_icon_home"
+        android:state_focused="true" />
+    <item android:drawable="@drawable/background_icon_home"
+        android:state_hovered="true" />
+    <item android:drawable="@drawable/background_icon_home"
+        android:state_selected="true" />
+    <item android:drawable="@drawable/transparent_background"
+        android:state_hovered="false">
+    </item>
+
+</selector>
+

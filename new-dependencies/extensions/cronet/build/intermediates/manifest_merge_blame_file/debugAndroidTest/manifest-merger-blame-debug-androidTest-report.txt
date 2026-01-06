@@ -1,0 +1,140 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright (C) 2021 The Android Open Source Project
+4
+5     Licensed under the Apache License, Version 2.0 (the "License");
+6     you may not use this file except in compliance with the License.
+7     You may obtain a copy of the License at
+8
+9          http://www.apache.org/licenses/LICENSE-2.0
+10
+11     Unless required by applicable law or agreed to in writing, software
+12     distributed under the License is distributed on an "AS IS" BASIS,
+13     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14     See the License for the specific language governing permissions and
+15     limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.google.android.exoplayer2.ext.cronet.test" >
+19
+20    <uses-sdk
+20-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:21:5-23:41
+21        android:minSdkVersion="16"
+21-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:22:9-35
+22        android:targetSdkVersion="30" />
+22-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:23:9-38
+23
+24    <uses-permission android:name="android.permission.INTERNET" />
+24-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:25:5-67
+24-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:25:22-64
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:26:5-79
+25-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:26:22-76
+26
+27    <instrumentation
+27-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:28:5-33:81
+28        android:name="androidx.test.runner.AndroidJUnitRunner"
+28-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:29:9-63
+29        android:functionalTest="false"
+29-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:30:9-39
+30        android:handleProfiling="false"
+30-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:31:9-40
+31        android:label="Tests for com.google.android.exoplayer2.ext.cronet.test"
+31-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:32:9-80
+32        android:targetPackage="com.google.android.exoplayer2.ext.cronet.test" />
+32-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:33:9-78
+33
+34    <queries>
+34-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:24:5-28:15
+35        <package android:name="androidx.test.orchestrator" />
+35-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:25:9-62
+35-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:25:18-59
+36        <package android:name="androidx.test.services" />
+36-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:26:9-58
+36-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:26:18-55
+37        <package android:name="com.google.android.apps.common.testing.services" />
+37-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:27:9-83
+37-->[androidx.test:runner:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/9271a8434115aea690608be0ff7fa9a5/transformed/runner-1.4.0/AndroidManifest.xml:27:18-80
+38    </queries>
+39
+40    <uses-permission android:name="android.permission.REORDER_TASKS" />
+40-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:24:5-72
+40-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:24:22-69
+41
+42    <application
+42-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:35:5-40:19
+43        android:allowBackup="false"
+43-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:36:9-36
+44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+44-->[androidx.core:core:1.2.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/dfb48d3de96ad91de651fbc87dd1bb3a/transformed/core-1.2.0/AndroidManifest.xml:24:18-86
+45        android:debuggable="true"
+46        android:usesCleartextTraffic="true" >
+46-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:37:9-44
+47        <uses-library android:name="android.test.runner" />
+47-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:39:9-60
+47-->/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/build/intermediates/tmp/manifest/androidTest/debug/tempFile2ProcessTestManifest14984930391399318457.xml:39:23-57
+48
+49        <activity
+49-->[com.google.android.gms:play-services-base:18.0.1] /Users/manikandanrajendran/.gradle/caches/transforms-3/c94486ef853488d05c884082f9a36dba/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+50            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+50-->[com.google.android.gms:play-services-base:18.0.1] /Users/manikandanrajendran/.gradle/caches/transforms-3/c94486ef853488d05c884082f9a36dba/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+51            android:exported="false"
+51-->[com.google.android.gms:play-services-base:18.0.1] /Users/manikandanrajendran/.gradle/caches/transforms-3/c94486ef853488d05c884082f9a36dba/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+52            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+52-->[com.google.android.gms:play-services-base:18.0.1] /Users/manikandanrajendran/.gradle/caches/transforms-3/c94486ef853488d05c884082f9a36dba/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+53
+54        <meta-data
+54-->[com.google.android.gms:play-services-basement:18.0.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/062c18b725aba53ae4460bc6332db6d8/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+55            android:name="com.google.android.gms.version"
+55-->[com.google.android.gms:play-services-basement:18.0.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/062c18b725aba53ae4460bc6332db6d8/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+56            android:value="@integer/google_play_services_version" />
+56-->[com.google.android.gms:play-services-basement:18.0.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/062c18b725aba53ae4460bc6332db6d8/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+57
+58        <activity
+58-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:27:9-34:20
+59            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+59-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:28:13-99
+60            android:exported="true"
+60-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:29:13-36
+61            android:theme="@android:style/Theme" >
+61-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:30:13-49
+62            <intent-filter>
+62-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:31:13-33:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:32:17-69
+63-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:32:25-66
+64            </intent-filter>
+65        </activity>
+66        <activity
+66-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:35:9-42:20
+67            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+67-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:36:13-95
+68            android:exported="true"
+68-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:37:13-36
+69            android:theme="@android:style/Theme" >
+69-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:38:13-49
+70            <intent-filter>
+70-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:31:13-33:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:32:17-69
+71-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:32:25-66
+72            </intent-filter>
+73        </activity>
+74        <activity
+74-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:43:9-50:20
+75            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+75-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:44:13-103
+76            android:exported="true"
+76-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:45:13-36
+77            android:theme="@android:style/Theme.Dialog" >
+77-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:46:13-56
+78            <intent-filter>
+78-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:31:13-33:29
+79                <action android:name="android.intent.action.MAIN" />
+79-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:32:17-69
+79-->[androidx.test:core:1.4.0] /Users/manikandanrajendran/.gradle/caches/transforms-3/3d05a8a4ad36850323d036b7a8412231/transformed/jetified-core-1.4.0/AndroidManifest.xml:32:25-66
+80            </intent-filter>
+81        </activity>
+82    </application>
+83
+84</manifest>

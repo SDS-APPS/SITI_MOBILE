@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "835951964380",
+    "project_id": "siti-mobile-app",
+    "storage_bucket": "siti-mobile-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835951964380:android:da06674d43f470af4f8419",
+        "android_client_info": {
+          "package_name": "com.siti.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFcE7uKvpncmN3TXtc2x1iSFmLVBCY1Dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/layout/notification_template_icon_group.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/layout/custom_dialog.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/layout/notification_template_part_chronometer.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/layout/notification_action.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/layout/notification_action.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/layout/notification_action_tombstone.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/layout/notification_template_part_time.xml",
+        "source": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0:/layout/notification_template_part_time.xml"
+    }
+]

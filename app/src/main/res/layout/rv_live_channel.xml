@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.siti.mobile.Utils.FocusFixFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:layout_marginTop="@dimen/margin_top_channels_livetv"
+    android:layout_marginBottom="@dimen/margin_bottom_channels_livetv">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivChannelIcon"
+            android:layout_margin="1.5dp"
+            android:layout_marginStart="@dimen/margin_imageview_channel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_channel_count"
+            android:layout_width="@dimen/size_channel_icon_livetv"
+            android:layout_height="@dimen/size_channel_icon_livetv"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_launcher" />
+
+        <FrameLayout
+            android:layout_marginStart="@dimen/margin_start_channel_name_livetv_preview"
+            android:background="@drawable/selectable_channel_buttons"
+            android:padding="1.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@drawable/livetv_item_channel_background"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_channel_icon_livetv">
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/size_channel_icon_livetv">
+
+                    <TextView
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        tools:text="234"
+                        android:singleLine="true"
+                        android:layout_marginStart="@dimen/margin_start_channel_name_livetv_preview"
+                        android:id="@+id/tv_channel_count"
+                        android:layout_width="@dimen/width_text_number_item_livetv"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="TextView"
+                        android:textSize="@dimen/live_channel_adapter_text_size_channel_number" />
+
+                    <View
+                        android:background="@color/black"
+                        android:layout_marginStart="2dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:fontFamily="@font/inter_regular"
+                        android:id="@+id/tvChannel"
+                        android:layout_marginStart="@dimen/margin_start_name_channel_livetv"
+                        android:layout_gravity="center_vertical"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:scrollHorizontally="true"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="horizontal"
+                        android:text="TextView"
+                        android:textSize="@dimen/live_channel_adapter_text_size_channel" />
+
+
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:padding="@dimen/padding_channels_preview"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/margin_common_icons_livetv_items"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_live_fav"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/live_channel_catchup_icon"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:scrollHorizontally="true"
+                        android:id="@+id/ivCatchupIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="@dimen/size_channel_icon_livetv"
+                        android:fadingEdge="horizontal"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="TextView"
+                        android:textSize="@dimen/text_size_items_menu" />
+
+
+
+                    <ImageView
+                        android:layout_marginEnd="@dimen/margin_common_icons_livetv_items"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/drmChannel"
+                        android:id="@+id/iv_live_fav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_is_fav" />
+
+                    <TextView
+                        android:layout_marginEnd="@dimen/margin_common_icons_livetv_items"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/drmChannel"
+                        android:textColor="#ffffff"
+                        android:minWidth="@dimen/min_width_drm"
+                        android:fontFamily="@font/quicksand"
+                        android:textSize="17dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</com.siti.mobile.Utils.FocusFixFrameLayout>

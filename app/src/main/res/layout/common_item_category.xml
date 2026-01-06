@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.siti.mobile.Utils.FocusFixFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cat_item_height"
+    android:layoutDirection="ltr"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_top_item_cat_livetv"
+    android:layout_marginBottom="@dimen/margin_bottom_item_cat_livetv"
+    android:weightSum="1">
+
+        <FrameLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/selectable_channel_buttons"
+            android:id="@+id/containerItemCat"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="@dimen/width_cat_view_button"
+                    android:layout_height="@dimen/cat_item_height">
+
+                        <LinearLayout
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:background="@drawable/category_item_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvChannelName"
+                                    android:layout_weight="0.9"
+                                    android:layout_marginStart="20dp"
+                                    android:singleLine="true"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit ="marquee_forever"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:text="TextView"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_items_menu" />
+
+                                <ImageView
+                                    android:id="@+id/arrowAll"
+                                    android:visibility="gone"
+                                    android:layout_weight="0.1"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:src="@drawable/arrow_left"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"/>
+
+                        </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+</com.siti.mobile.Utils.FocusFixFrameLayout>

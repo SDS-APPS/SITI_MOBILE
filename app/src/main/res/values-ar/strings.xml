@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name" translatable="false">TANGO FREE TV</string>
+    <string name="first_time_message" translatable="false">لقد اكتشفنا أن هذه هي المرة الأولى التي تستخدم فيها تطبيقنا ونريد تهيئة جهازك بشكل صحيح</string>
+    <string name="first_time_message_2" translatable="false">هل يمكنك سماع هذا الصوت بشكل صحيح؟</string>
+
+
+    <string name="autorization_engineering" translatable="false">لاستخدام هذه الوظيفة تحتاج إلى إذن.</string>
+    <string name="home_screen" translatable="false">الشاشة الرئيسية</string>
+    <string name="live_tv_screen" translatable="false">شاشة تلفزيون حية</string>
+    <string name="channel_change" translatable="false">تغيير القناة</string>
+    <string name="black_frame" translatable="false">إطار أسود</string>
+    <string name="last_frame" translatable="false">الإطار الأخير</string>
+    <string name="first_play" translatable="false">أول مسرحية</string>
+    <string name="last_channel_viewed" translatable="false">آخر قناة تم عرضها</string>
+    <string name="landing_channel" translatable="false">قناة الهبوط</string>
+    <string name="theme" translatable="false">سمة</string>
+    <string name="leanback" translatable="false">استلقي</string>
+    <string name="original" translatable="false">إبداعي</string>
+    <string name="language" translatable="false">لغة</string>
+    <string name="english" translatable="false">إنجليزي</string>
+    <string name="arabic" translatable="false">عربي</string>
+    <string name="min_buffer_ms" translatable="false">دقيقة عازلة السيدة</string>
+    <string name="buffer_settings" translatable="false">إعدادات المخزن المؤقت</string>
+    <string name="max_buffer_ms" translatable="false">ماكس العازلة السيدة</string>
+    <string name="buffer_for_playback_ms" translatable="false">المخزن المؤقت للتشغيل السيدة</string>
+    <string name="buffer_for_playback_after_rebuffer_ms" translatable="false">المخزن المؤقت للتشغيل بعد إعادة المخزن المؤقت مللي ثانية</string>
+    <string name="save" translatable="false">يحفظ</string>
+    <string name="system_information" translatable="false">معلومات النظام</string>
+    <string name="username" translatable="false">اسم المستخدم</string>
+    <string name="validity" translatable="false">صلاحية</string>
+    <string name="app_version" translatable="false">نسخة التطبيق</string>
+    <string name="app_version_number" translatable="false">32</string>
+    <string name="android_version" translatable="false">نسخة أندرويد</string>
+    <string name="ram" translatable="false">ذاكرة رام</string>
+    <string name="storage" translatable="false">تخزين</string>
+    <string name="ota" translatable="false">وكالة السفر عبر الإنترنت</string>
+    <string name="lasted" translatable="false">استمر</string>
+    <string name="stb_model" translatable="false">نموذج فك التشفير</string>
+    <string name="network_id" translatable="false">عنوان الشبكة</string>
+    <string name="network_name" translatable="false">اسم الشبكة</string>
+    <string name="drm_id" translatable="false">معرف إدارة الحقوق الرقمية</string>
+    <string name="drm_id_number" translatable="false">9005</string>
+    <string name="drm_version" translatable="false">نسخة إدارة الحقوق الرقمية</string>
+    <string name="for_assistance_please_contact" translatable="false">للمساعدة يرجى الاتصال</string>
+    <string name="assistant_number" translatable="false">+91 022-4888888</string>
+    <string name="ok" translatable="false">موافق</string>
+    <string name="bootup" translatable="false">يبدء تشغيل الأجهزة</string>
+    <string name="unicast" translatable="false">يونيكاست</string>
+    <string name="multicast" translatable="false">متعدد</string>
+    <string name="password" translatable="false">كلمة المرور</string>
+    <string name="go" translatable="false">يذهب</string>
+    <string name="sds_player" translatable="false">مشغل SDS</string>
+    <string name="exoplayer" translatable="false">ExoPlayer</string>
+    <string name="hw_a_v_sync" translatable="false">HW A/V مزامنة</string>
+    <string name="save_settings" translatable="false">احفظ التغييرات</string>
+    <string name="select_server" translatable="false">حدد الخادم</string>
+    <string name="select_uid" translatable="false">حدد معرف فريد</string>
+    <string name="login_failed" translatable="false">فشل تسجيل الدخول !</string>
+    <string name="logout_success" translatable="false">نجح تسجيل الخروج</string>
+    <string name="login_success" translatable="false">تم تسجيل الدخول بنجاح</string>
+    <string name="sync_packages" translatable="false">مزامنة الحزم</string>
+    <string name="force_logout" translatable="false">فرض الخروج</string>
+    <string name="invalid_channel" translatable="false">قناة غير صالحة</string>
+    <string name="channel_not_subscribed" translatable="false">القناة غير مشترك</string>
+    <string name="buffer_changed" translatable="false">تم تغيير تكوين المخزن المؤقت بنجاح</string>
+    <string name="density">كثافة</string>
+
+</resources>

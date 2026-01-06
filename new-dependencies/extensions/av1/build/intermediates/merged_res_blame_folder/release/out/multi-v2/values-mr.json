@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-mergeReleaseResources-5:/values-mr/values-mr.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/packaged_res/release/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,190,259,328,403,467,564,658",
+                        "endColumns": "69,64,68,68,74,63,96,93,72",
+                        "endOffsets": "120,185,254,323,398,462,559,653,726"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/03c8169a8dff0a36c47ab8588a94be42/transformed/core-1.7.0/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "731",
+                        "endColumns": "100",
+                        "endOffsets": "827"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-7:/values-mr/values-mr.xml",
+            "map": [
+                {
+                    "source": "/Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/packaged_res/release/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,190,259,328,403,467,564,658",
+                        "endColumns": "69,64,68,68,74,63,96,93,72",
+                        "endOffsets": "120,185,254,323,398,462,559,653,726"
+                    }
+                },
+                {
+                    "source": "/Users/manikandanrajendran/.gradle/caches/transforms-3/03c8169a8dff0a36c47ab8588a94be42/transformed/core-1.7.0/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "731",
+                        "endColumns": "100",
+                        "endOffsets": "827"
+                    }
+                }
+            ]
+        }
+    ]
+}

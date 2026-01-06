@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/src/main/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/opt/homebrew/bin/ninja",
+      "-C",
+      "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/opt/homebrew/bin/ninja",
+    "-C",
+    "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/.cxx/RelWithDebInfo/b5626672/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "ffmpegJNI::@6890427a1f51a3e7e1df": {
+      "artifactName": "ffmpegJNI",
+      "abi": "arm64-v8a",
+      "output": "/Users/x3x0x/StudioProjects/sds-iptv/new-dependencies/extensions/ffmpeg/build/intermediates/cxx/RelWithDebInfo/b5626672/obj/arm64-v8a/libffmpegJNI.so",
+      "runtimeFiles": []
+    }
+  }
+}

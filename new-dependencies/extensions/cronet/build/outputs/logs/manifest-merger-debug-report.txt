@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:16:1-22:12
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:16:1-22:12
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:16:1-22:12
+	package
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:17:5-55
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:16:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:19:22-76
+uses-sdk
+ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+	android:targetSdkVersion
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml
+		ADDED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml:20:5-17
+		INJECTED from /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/cronet/src/main/AndroidManifest.xml

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingStart="@dimen/info_live_padding_views"
+        android:paddingEnd="@dimen/info_live_padding_views"
+        android:gravity="center_vertical"
+        android:background="@drawable/info_live_channel_name_background"
+        android:orientation="horizontal"
+        android:layout_width="420dp"
+        android:layout_height="@dimen/info_live_height_superior_view">
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/tv_info_live_channel_number"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:text="271"
+            android:layout_width="wrap_content"
+            android:background="@color/info_live_background_channel_number"
+            android:minWidth="40dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/tv_info_live_channel_name"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="22sp"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/white"
+            tools:text="STAR SPORTS 1"
+            android:layout_marginStart="@dimen/info_live_common_horizontal_margin_items"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivInfoLiveCatchupIcon"
+            android:src="@drawable/live_channel_catchup_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"/>
+
+</LinearLayout>

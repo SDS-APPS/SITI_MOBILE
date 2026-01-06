@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-appcompat-1.1.0-5:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-merged_res-14:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.google.android.exoplayer2.ext.cast.exoplayer-extension-cast-appcompat-1.1.0-5:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    }
+]

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:padding="2dp"
+        android:background="@drawable/background_ad_1"
+        android:layout_weight="0.25"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/advertisment_imageviews"/>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/settings_content_background"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/settings_margin_top_line_inferior"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:nextFocusRight="@id/settingsBtnInfo"
+                android:id="@+id/settingsBtnMoreSettings"
+                android:layout_width="@dimen/size_setting_button"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_settings_icons_s"
+                android:layout_height="@dimen/size_setting_button">
+
+                <ImageView
+                    android:src="@drawable/settings_more_settings_icon"
+                    android:layout_width="@dimen/settings_image_size"
+                    android:layout_height="@dimen/settings_image_size"/>
+
+                <TextView
+                    android:textSize="@dimen/settings_text_size"
+                    android:fontFamily="@font/inter_bold"
+                    android:textColor="@color/black"
+                    android:text="More Settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:nextFocusRight="@id/settingsBtnLogout"
+                android:nextFocusLeft="@id/settingsBtnMoreSettings"
+                android:id="@+id/settingsBtnInfo"
+                android:layout_width="@dimen/size_setting_button"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_settings_icons_s"
+                android:layout_height="@dimen/size_setting_button">
+
+                <ImageView
+                    android:src="@drawable/settings_info_icon"
+                    android:layout_width="@dimen/settings_image_size"
+                    android:layout_height="@dimen/settings_image_size"/>
+
+                <TextView
+                    android:textSize="@dimen/settings_text_size"
+                    android:fontFamily="@font/inter_bold"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:nextFocusLeft="@id/settingsBtnInfo"
+                android:id="@+id/settingsBtnLogout"
+                android:layout_marginStart="10dp"
+                android:layout_width="@dimen/size_setting_button"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_settings_icons_s"
+                android:layout_height="@dimen/size_setting_button">
+
+                <ImageView
+                    android:src="@drawable/settings_logout_icon"
+                    android:layout_width="@dimen/settings_image_size"
+                    android:layout_height="@dimen/settings_image_size"/>
+
+                <TextView
+                    android:textSize="@dimen/settings_text_size"
+                    android:fontFamily="@font/inter_bold"
+                    android:textColor="@color/black"
+                    android:text="Logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:background="@drawable/background_ad_1"
+        android:layout_weight="0.25"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"/>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+
+</LinearLayout>

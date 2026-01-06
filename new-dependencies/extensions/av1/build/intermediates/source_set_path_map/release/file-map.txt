@@ -1,0 +1,17 @@
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-core-1.7.0-0 /Users/manikandanrajendran/.gradle/caches/transforms-3/03c8169a8dff0a36c47ab8588a94be42/transformed/core-1.7.0/res
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-lifecycle-runtime-2.3.1-1 /Users/manikandanrajendran/.gradle/caches/transforms-3/0cbbaa1a289198c7795c818a6ef41636/transformed/lifecycle-runtime-2.3.1/res
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-jetified-annotation-experimental-1.1.0-2 /Users/manikandanrajendran/.gradle/caches/transforms-3/1c2478eab479a7d06887170aee772825/transformed/jetified-annotation-experimental-1.1.0/res
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-pngs-3 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/generated/res/pngs/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-resValues-4 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/generated/res/resValues/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-rs-5 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/generated/res/rs/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-mergeReleaseResources-6 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-mergeReleaseResources-7 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-merged_res-8 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/build/intermediates/merged_res/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-main-9 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/src/main/res
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-release-10 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/extensions/av1/src/release/res
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-packaged_res-11 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/common/build/intermediates/packaged_res/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-packaged_res-12 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/core/build/intermediates/packaged_res/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-packaged_res-13 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/database/build/intermediates/packaged_res/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-packaged_res-14 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/datasource/build/intermediates/packaged_res/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-packaged_res-15 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/decoder/build/intermediates/packaged_res/release
+com.google.android.exoplayer2.ext.av1.exoplayer-extension-av1-packaged_res-16 /Users/manikandanrajendran/AndroidStudioProjects/sds-iptv1/new-dependencies/library/extractor/build/intermediates/packaged_res/release
