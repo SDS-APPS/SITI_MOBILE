@@ -102,6 +102,8 @@ import androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy
 import androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy
 import java.net.HttpURLConnection
 import java.net.URL
+import kotlin.run
+import kotlin.toString
 
 
 const val TAG = "PlayerManager"
@@ -130,7 +132,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
     }
 
     fun playWithMediaPlayer(mediaPlayer: MediaPlayer, url: String) {
-        Log.w(TAG, "MEdiaPlayer URL: $url")
         currentPlayer = PlayerType.MEDIAPLAYER
         mediaPlayerIsPlaying = true
         try {
@@ -173,7 +174,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
             Log.w("PlayerManager", "PrepareAsync MediaPlayer")
         } catch (e: Exception) {
             e.printStackTrace()
-            Log.d(TAG, "e:\$e")
         }
     }
 
@@ -184,7 +184,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         url: String,
         playWhenReady: Boolean
     ) {
-        Log.w(TAG, "Exoplayer URL UDP: $url")
         currentPlayer = PlayerType.EXOPLAYER
         val extractorsFactory = DefaultExtractorsFactory().setConstantBitrateSeekingEnabled(true)
             .setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_ALLOW_NON_IDR_KEYFRAMES)
@@ -360,10 +359,8 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
                 licenseUrl = licenseUrl,
                 mediaUrl = mediaUrl
             )
-            Log.d(TAG, "Nueva licencia descargada: ${newKeySetId?.size ?: 0} bytes")
         }else{
             val remaningTime = licenseHelper.getLicenseDurationRemainingSec(keySetId).first
-            Log.w(TAG, "Remaning time :$remaningTime")
         }
     }
 
@@ -403,7 +400,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
 
         currentPlayer = PlayerType.EXOPLAYER
         JavaHelper.disableSSLCertificateVerify()
-        Log.w(TAG, "URL: $url")
 
         HttpsURLConnection.setDefaultHostnameVerifier { _, _ -> true }
 
@@ -414,13 +410,13 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
 
         val defaultHttpFactory = DefaultHttpDataSource.Factory()
             .setUserAgent(userAgent)
-            .setConnectTimeoutMs(DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS * 2)
-            .setReadTimeoutMs(DefaultHttpDataSource.DEFAULT_READ_TIMEOUT_MILLIS * 2)
+            .setConnectTimeoutMs(1000)
+            .setReadTimeoutMs(1000)
             .setAllowCrossProtocolRedirects(true)
             .setDefaultRequestProperties(
                 mapOf(
-                    "Referer" to "http://115.187.52.252",
-                    "Origin" to "http://115.187.52.252"
+                    "Referer" to "https://103.187.78.90/",
+                    "Origin" to "https://103.187.78.90/"
                 )
             )
 
@@ -434,7 +430,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
 
         val uri = Uri.parse(newUrl)
 //        val uri = Uri.parse("https://115.187.52.252/sdscoder1/NKTVPLUS/index.mpd")
-        Log.w(TAG, "**************** NEW URI:::::::::::::: $uri")
 
         val drmSchemeUuid = C.WIDEVINE_UUID
         val type = Util.inferContentType(uri)
@@ -442,7 +437,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         val mediaItemBuilder = MediaItem.Builder().setUri(uri)
 
         if (type == C.TYPE_DASH) {
-            Log.i(TAG, "onStart: type dash")
+
 
             val chunkSourceFactory = DefaultDashChunkSource.Factory(dataSourceFactory)
             val dashFactory = DashMediaSource.Factory(chunkSourceFactory, dataSourceFactory)
@@ -453,7 +448,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
                 .setMultiSession(false)
 
             savedKeySetId?.let {
-                Log.d(TAG, "Usando licencia persistente para $uri")
                 drmBuilder.setKeySetId(it)
             }
 
@@ -492,6 +486,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
 
             player.addListener(object : Player.Listener {
                 override fun onPlayerError(error: PlaybackException) {
+                    println(" --> error 1")
                     var cause: Throwable? = error
                     while (cause != null) {
                         if (cause is BehindLiveWindowException) {
@@ -923,11 +918,11 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
             }
 
             override fun onPlayerError(error: PlaybackException) {
-//                println(" --> error 1")
-//                handler.removeCallbacksAndMessages(null)
-//                handler.postDelayed({
-//                    containerChannelNotAvailable.visibility = View.VISIBLE
-//                }, 1000)
+                println(" --> error 2")
+                handler.removeCallbacksAndMessages(null)
+                handler.postDelayed({
+                    containerChannelNotAvailable.visibility = View.VISIBLE
+                }, 1000)
                 super.onPlayerError(error)
             }
 
@@ -1208,7 +1203,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
             }
 
             realUrl = if (realUrl.contains("10.22.254.30") && CurrentData.ip.contains(SERVER_GLOBAL_IP_EMPTY)) {
-                realUrl.replace("10.22.254.30", "115.187.52.252")
+                realUrl.replace("10.22.254.30", "103.187.78.90")
             }
             else {
                 realUrl
@@ -1222,7 +1217,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
                 Log.w(TAG, "Url is Empty (Returning from Player )")
                 return
             } else {
-                Log.w(TAG, "Play URL Home Screen: $realUrl")
+//                Log.w(TAG, "Play URL Home Screen: $realUrl")
             }
             if (realUrl[0] == 'h') {
                 currentPlayer = getPlayerByTypeCast(StreamType.UNICAST)
@@ -1253,6 +1248,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
                     playerView.visibility = View.VISIBLE
                     currentPlayer = getPlayerByTypeCast(StreamType.MULTICAST)
                 }
+                println("print --> DRM: $drm")
                 if (drm == 0) {
                     Log.w(TAG, "Playing URL Decrypted: $realUrl")
                     if (PlayerScreen.isCatchup) {
@@ -1332,4 +1328,4 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
     }
 
 
-    }
+}

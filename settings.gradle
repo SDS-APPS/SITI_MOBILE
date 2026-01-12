@@ -1,4 +1,4 @@
-rootProject.name='SITI MOBILE'
+rootProject.name='SITITV MOBILE'
 include ':app'
 include ':new-dependencies'
 include ':media'

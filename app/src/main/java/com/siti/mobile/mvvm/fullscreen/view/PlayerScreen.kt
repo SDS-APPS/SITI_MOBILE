@@ -47,6 +47,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
+import com.siti.mobile.BuildConfig
 import com.siti.mobile.FrequencyGenerator
 import com.siti.mobile.Model.JoinData.JoinLiveStreams
 import com.siti.mobile.Model.RetroFit.ProgramsAllChannelsModel
@@ -69,6 +70,7 @@ import com.siti.mobile.Player.PlayerType
 import com.siti.mobile.Player.StreamType
 import com.siti.mobile.R
 import com.siti.mobile.Utils.ChannelSelectedCallback
+import com.siti.mobile.Utils.Crypto
 import com.siti.mobile.Utils.Helper
 import com.siti.mobile.Utils.HelperCategoryFocus
 import com.siti.mobile.Utils.KEY_BOOTUP_ACTIVITY
@@ -683,11 +685,15 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
         if (channel.source == null) {
             return
         }
+        val decryptURL = Crypto.decryptCBC(channel.source)
+        if (BuildConfig.DEBUG) {
+            println("Decrypted URL: $decryptURL")
+        }
         playerManager.playChannel(
             false,
             binding.player,
             binding.progressBar,
-            channel.source,
+            decryptURL,
             channel.drm_enabled,
             object : PlayerFuncI {
                 override fun createPlayerCallback() {
@@ -1584,10 +1590,10 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
             )
         } else {
             listOf(
-                listOf("1", "2", "3", "a", "b", "c", "d", "e", "f", "g"),
-                listOf("4", "5", "6", "h", "i", "j", "k", "l", "m", "n"),
-                listOf("7", "8", "9", "o", "p", "q", "r", "s", "t", "u"),
-                listOf(" ", "0", "<-", "v", "w", "x", "y", "z", "⌫", "OK")
+                listOf("1", "2", "3", "A", "B", "C", "D", "E", "F", "G"),
+                listOf("4", "5", "6", "H", "I", "J", "K", "L", "M", "N"),
+                listOf("7", "8", "9", "O", "P", "Q", "R", "S", "T", "U"),
+                listOf(" ", "0", "<-", "V", "W", "X", "Y", "Z", "⌫", "OK")
             )
         }
     }

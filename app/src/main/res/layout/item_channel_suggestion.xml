@@ -11,6 +11,7 @@
         android:background="@android:color/transparent"
         android:focusable="false"
         android:padding="12dp"
+        android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"

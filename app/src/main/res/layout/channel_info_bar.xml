@@ -148,6 +148,7 @@
                         android:fontFamily="@font/inter_bold"
                         android:textColor="@color/white"
                         android:textSize="18sp"
+                        android:textAllCaps="true"
                         tools:text="NEWS18 INDIA" />
 
                     <LinearLayout
