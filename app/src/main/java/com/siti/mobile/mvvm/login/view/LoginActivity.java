@@ -198,13 +198,13 @@ public class LoginActivity extends AppCompatActivity {
 
         serverMap = new HashMap<String, String>();
 
-//        serverMap.put(SERVER_LOCAL_NAME, SERVER_LOCAL_IP_LOGIN);
+        serverMap.put(SERVER_LOCAL_NAME, SERVER_LOCAL_IP_LOGIN);
         if(BuildConfig.DEBUG){
             serverMap.put(SERVER_IPTV_NAME, SERVER_GLOBAL_IP_LOGIN);
         }
 
         List<String> providerName = new ArrayList<>();
-//        providerName.add(SERVER_LOCAL_NAME);
+        providerName.add(SERVER_LOCAL_NAME);
         if(BuildConfig.DEBUG) {
             providerName.add(SERVER_IPTV_NAME);
         }
@@ -228,14 +228,14 @@ public class LoginActivity extends AppCompatActivity {
         editTextFilledExposedDropdown.setAdapter(adapter);
         editTextFilledExposedDropdown.setText(providerName.get(0), false);
 
-//        if(BuildConfig.DEBUG) {
-//            editTextFilledExposedDropdown.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    editTextFilledExposedDropdown.showDropDown();
-//                }
-//            });
-//        }
+        if(BuildConfig.DEBUG) {
+            editTextFilledExposedDropdown.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    editTextFilledExposedDropdown.showDropDown();
+                }
+            });
+        }
 
 
         EditText editTextFilledMac = findViewById(R.id.loginEtMacId);
@@ -250,18 +250,18 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-        //   List<String> macProviderName = new ArrayList<>();
+        List<String> macProviderName = new ArrayList<>();
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
-        //    String macAddress = wifiManager.getConnectionInfo().getMacAddress();
+        String macAddress = wifiManager.getConnectionInfo().getMacAddress();
         String DeviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-        //    macProviderName.add(macAddress);
+        macProviderName.add(macAddress);
 
-//            ArrayAdapter<String> macadapter =
-//                    new ArrayAdapter<>(
-//                            getApplicationContext(),
-//                            R.layout.dropdown_menu_popup_item,
-//                            macProviderName);
+        ArrayAdapter<String> macadapter =
+                new ArrayAdapter<>(
+                        getApplicationContext(),
+                        R.layout.dropdown_menu_popup_item,
+                        macProviderName);
         macAddress = getMacAddress();
         if(macAddress != null && !macAddress.isEmpty()) {
             editTextFilledMac.setText(macAddress);

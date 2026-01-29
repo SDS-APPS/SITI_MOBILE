@@ -2,13 +2,13 @@ package com.siti.mobile.Utils
 
 // -- *** SERVER *** -- //
 //LOCAL
-const val SERVER_LOCAL_NAME = "MAC ID"
-const val SERVER_LOCAL_IP_LOGIN = "https://10.22.254.26/apis/"
-const val SERVER_LOCAL_IP_EMPTY = "10.22.254.26"
-const val SERVER_LOCAL_IP_SOCKET = "https://10.22.254.26"
-const val SERVER_LOCAL_IP_ADMIN = "https://10.22.254.26:3001/admin/"
+const val SERVER_LOCAL_NAME = "LOCAL"
+const val SERVER_LOCAL_IP_LOGIN = "https://iptv.e-net.in/apis/"
+const val SERVER_LOCAL_IP_EMPTY = "iptv.e-net.in"
+const val SERVER_LOCAL_IP_SOCKET = "https://iptv.e-net.in"
+const val SERVER_LOCAL_IP_ADMIN = "https://iptv.e-net.in:3001/admin/"
 //IPTV
-const val SERVER_IPTV_NAME = "MAC ID\u200E "
+const val SERVER_IPTV_NAME = "PUBLIC"
 const val SERVER_GLOBAL_IP_LOGIN = "https://103.187.78.90/apis/"
 const val SERVER_GLOBAL_IP_EMPTY = "103.187.78.90"
 const val SERVER_GLOBAL_IP_ADMIN = "http://103.187.78.90/admin/"

@@ -142,7 +142,7 @@
                 android:layout_marginTop="@dimen/common_margin_top_field_login"
                 android:background="@drawable/login_server_field_selector"
                 android:orientation="horizontal"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:paddingEnd="15dp">
 
                 <ImageView

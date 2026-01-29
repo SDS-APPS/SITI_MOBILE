@@ -1202,8 +1202,8 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
              //   url.replace("192.168.10.42", "117.216.44.13")
             }
 
-            realUrl = if (realUrl.contains("10.22.254.30") && CurrentData.ip.contains(SERVER_GLOBAL_IP_EMPTY)) {
-                realUrl.replace("10.22.254.30", "103.187.78.90")
+            realUrl = if (realUrl.contains("iptv.e-net.in") && CurrentData.ip.contains(SERVER_GLOBAL_IP_EMPTY)) {
+                realUrl.replace("iptv.e-net.in", "103.187.78.90")
             }
             else {
                 realUrl
