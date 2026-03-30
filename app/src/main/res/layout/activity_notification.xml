@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_default"
-    tools:context="com.siti.mobile.Activity.NotificationActivity">
+    tools:context="com.siti.mobilesds.Activity.NotificationActivity">
 
     <LinearLayout
         android:id="@+id/fingerprintFakeLaker"

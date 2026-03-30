@@ -6,130 +6,68 @@
     android:layout_height="match_parent"
     android:background="@drawable/default_background">
 
-    <!--<include layout="@layout/base_background_d"/>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <View
-            android:layout_weight="0.10"
-            android:layout_width="1dp"
-            android:layout_height="0dp"/>
-
-        <FrameLayout
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_weight="0.73"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-
-            <include layout="@layout/activity_login_content"/>
-
-        </FrameLayout>
-
-        <View
-            android:layout_weight="0.06"
-            android:layout_width="1dp"
-            android:layout_height="0dp"/>
-
-    </LinearLayout>-->
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/topCLT"
+        android:id="@+id/topLyt"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/common_top_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.12"
         app:layout_constraintTop_toTopOf="parent">
 
-        <FrameLayout
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_45sdp"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_top_left"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:src="@drawable/logo_top_left" />
-
-        </FrameLayout>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15" />
 
         <LinearLayout
-            android:layout_width="@dimen/base_background_width_date"
-            android:layout_height="@dimen/height_header_horizontal_linear_layout"
-            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingStart="4dp"
-            android:paddingEnd="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="@dimen/base_background_calendar_width"
-                android:layout_height="@dimen/base_background_calendar_height"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/calendar_icon" />
 
             <TextView
                 android:id="@+id/tvCurrentDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
+                android:layout_marginStart="6dp"
                 android:fontFamily="@font/inter_bold"
                 android:textColor="@color/white"
-                android:textSize="@dimen/base_background_text_size_date"
+                android:textSize="14sp"
                 tools:text="08/09/2023" />
 
             <ImageView
-                android:layout_width="@dimen/base_background_clock_width"
-                android:layout_height="@dimen/base_background_clock_height"
-                android:layout_marginStart="4dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
                 android:src="@drawable/clock_icon" />
 
             <TextView
                 android:id="@+id/tvCurrentHour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
+                android:layout_marginStart="6dp"
                 android:fontFamily="@font/inter_bold"
-                android:format12Hour="hh:mm"
-                android:format24Hour="hh:mm"
                 android:textColor="@color/white"
-                android:textSize="@dimen/base_background_text_size_date"
+                android:textSize="14sp"
                 tools:text="5:17" />
-
-            <ImageView
-                android:id="@+id/btnSettings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:background="@drawable/icon_settings_selectable"
-                android:focusable="false"
-                android:src="@drawable/exo_ic_settings"
-                android:visibility="gone"
-                app:tint="#FF7700" />
-
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomLYT"
-        app:layout_constraintTop_toBottomOf="@+id/topCLT">
-
-        <include layout="@layout/activity_login_content" />
-
-    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/bottomLYT"
@@ -138,17 +76,217 @@
         android:background="@drawable/base_footer_default"
         android:gravity="center|end"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHeight_percent="0.09">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/inter_bold"
             android:text="Powered by SITI-TV"
             android:textColor="@color/white"
-            android:textSize="@dimen/default_background_powered_text_size" />
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/centerLyt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLYT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLyt"
+        app:layout_constraintWidth_percent="0.6">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="@drawable/login_background_zone_field"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="15dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/login_userp_icon" />
+
+                <ImageView
+                    android:id="@+id/iconServerstate"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_server_off_icon" />
+
+                <FrameLayout
+                    android:id="@+id/containerEtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_user_field_selector">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/login_account_icon" />
+
+                    <EditText
+                        android:id="@+id/loginEtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/inter_bold"
+                        android:gravity="center"
+                        android:hint="User name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="25dp"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerEtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/login_password_field_selector">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/login_password_icon" />
+
+                    <EditText
+                        android:id="@+id/loginEtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/inter_bold"
+                        android:gravity="center"
+                        android:hint="Password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingStart="25dp"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerEtMacId"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/login_macid_field_selector">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/id_img" />
+
+                    <EditText
+                        android:id="@+id/loginEtMacId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:fontFamily="@font/inter_bold"
+                        android:gravity="center"
+                        android:hint="Mac id"
+                        android:paddingStart="25dp"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerEtserver"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/login_server_field_selector">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/login_server_icon" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:fontFamily="@font/inter_bold"
+                        android:gravity="center"
+                        android:hint="Server"
+                        android:nextFocusDown="@id/btn_login"
+                        android:paddingStart="25dp"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_black"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <FrameLayout
+                        android:id="@+id/btn_login"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/login_button_drawable_selector"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrow_login" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_banner" />
 
     </LinearLayout>
 

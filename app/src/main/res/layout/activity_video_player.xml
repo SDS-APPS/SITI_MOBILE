@@ -9,7 +9,7 @@
     android:layoutDirection="ltr"
     android:nextFocusDown="@+id/player"
     android:orientation="horizontal"
-    tools:context="com.siti.mobile.mvvm.fullscreen.view.PlayerScreen">
+    tools:context="com.siti.mobilesds.mvvm.fullscreen.view.PlayerScreen">
 
 
     <LinearLayout
@@ -130,7 +130,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:resize_mode="fixed_width"
                 app:shutter_background_color="@color/transparent"
-                app:surface_type="texture_view"
+                app:surface_type="surface_view"
                 app:use_controller="true" />
 
 

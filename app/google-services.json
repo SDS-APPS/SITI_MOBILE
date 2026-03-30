@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:835951964380:android:da06674d43f470af4f8419",
+        "mobilesdk_app_id": "1:835951964380:android:f124374eb52a7e8a4f8419",
         "android_client_info": {
-          "package_name": "com.siti.mobile"
+          "package_name": "com.siti.mobilesds"
         }
       },
       "oauth_client": [],
