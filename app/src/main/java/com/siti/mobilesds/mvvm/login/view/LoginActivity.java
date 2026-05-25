@@ -139,20 +139,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @OptIn(markerClass = UnstableApi.class)
     private void loginMethods() {
-        HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
-            @Override
-            public boolean verify(String hostname, SSLSession session) {
-                try {
-                    Certificate[] certificates = session.getPeerCertificates();
-                    X509Certificate x509Certificate = (X509Certificate) certificates[0];
-                    x509Certificate.checkValidity();
-                    X500Principal subject = x509Certificate.getSubjectX500Principal();
-                    return hostname.equalsIgnoreCase(subject.getName());
-                } catch (Exception e) {
-                    return false;
-                }
-            }
-        });
         Objects.requireNonNull(getSupportActionBar()).hide();
         authHelper = new AuthHelper();
         analyticsEventsHelper = new AnalyticsEventsHelper();

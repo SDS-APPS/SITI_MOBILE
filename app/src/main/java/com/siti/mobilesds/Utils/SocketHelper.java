@@ -461,7 +461,7 @@ public class SocketHelper extends AppCompatActivity {
                 socket.close();
             }
         });
-        JavaHelper.disableSSLCertificateVerify();
+//        JavaHelper.disableSSLCertificateVerify();
         socket.connect();
     }
 

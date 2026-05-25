@@ -38,7 +38,7 @@ public class SocketSingleton {
             if(mPreferences.getString(KEY_SERVER_IP, "").contains("172.31")) {
                 mSocket = IO.socket(SERVER_LOCAL_IP_SOCKET, opts);
             }else{
-                mSocket = IO.socket(SERVER_GLOBAL_IP_SOCKET, opts);
+                mSocket = IO.socket(SERVER_LOCAL_IP_SOCKET, opts);
             }
 
         } catch (URISyntaxException e) {
@@ -54,42 +54,9 @@ public class SocketSingleton {
         return mSocket;
     }
 
-    public static OkHttpClient getOkHttpClientTrust(){
-        TrustManager[] trustAllCerts = new TrustManager[] {
-                new X509TrustManager() {
-                    public X509Certificate[] getAcceptedIssuers() {
-                        return new X509Certificate[0];
-                    }
-
-                    @Override
-                    public void checkClientTrusted(X509Certificate[] certs, String authType) {}
-
-                    @Override
-                    public void checkServerTrusted(X509Certificate[] certs, String authType) {}
-                }
-        };
-        SSLContext sc = null;
-
-        try {
-            sc = SSLContext.getInstance("SSL");
-            sc.init(null, trustAllCerts, new SecureRandom());
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        } catch (KeyManagementException e) {
-            throw new RuntimeException(e);
-        }
-
-
-        OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                .sslSocketFactory(sc.getSocketFactory(), (X509TrustManager) trustAllCerts[0])
-                .hostnameVerifier(new HostnameVerifier() {
-                    @Override
-                    public boolean verify(String s, SSLSession sslSession) {
-                        return true;
-                    }
-                }).build();
-
-        return okHttpClient;
+    public static OkHttpClient getOkHttpClientTrust() {
+        return new OkHttpClient.Builder()
+                .build();
     }
 
 }

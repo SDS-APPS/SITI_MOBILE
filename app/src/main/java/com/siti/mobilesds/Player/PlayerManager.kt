@@ -100,6 +100,7 @@ import androidx.media3.exoplayer.hls.HlsMediaSource
 import androidx.media3.exoplayer.source.BehindLiveWindowException
 import androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy
 import androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy
+import com.siti.mobilesds.Utils.SERVER_LOCAL_IP_SOCKET
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -133,13 +134,6 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         currentPlayer = PlayerType.MEDIAPLAYER
         mediaPlayerIsPlaying = true
         try {
-            HttpsURLConnection.setDefaultHostnameVerifier { hostname, session ->
-                try {
-                    true
-                } catch (e: Exception) {
-                    false
-                }
-            }
             mediaPlayer.reset()
             mediaPlayer.setAudioAttributes(getAudioAttributes())
 
@@ -397,9 +391,16 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         }
 
         currentPlayer = PlayerType.EXOPLAYER
-        JavaHelper.disableSSLCertificateVerify()
+//        JavaHelper.disableSSLCertificateVerify()
 
-        HttpsURLConnection.setDefaultHostnameVerifier { _, _ -> true }
+        val defaultVerifier = HttpsURLConnection.getDefaultHostnameVerifier()
+        HttpsURLConnection.setDefaultHostnameVerifier { hostname, session ->
+            if (hostname == SERVER_LOCAL_IP_SOCKET) {
+                true
+            } else {
+                defaultVerifier.verify(hostname, session)
+            }
+        }
 
         val extractorsFactory = DefaultExtractorsFactory().setConstantBitrateSeekingEnabled(true)
             .setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_ALLOW_NON_IDR_KEYFRAMES)

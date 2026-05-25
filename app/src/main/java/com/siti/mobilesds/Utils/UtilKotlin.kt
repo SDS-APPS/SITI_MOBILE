@@ -222,8 +222,13 @@ fun changeLocalToGlobalIfRequired(url : String?) : String {
            // newUrl = url.replace("192.168.10.42", "117.216.44.13")
         }
     }
+    val defaultVerifier = HttpsURLConnection.getDefaultHostnameVerifier()
     HttpsURLConnection.setDefaultHostnameVerifier { hostname, session ->
-        true
+        if (hostname == SERVER_LOCAL_IP_SOCKET) {
+            true
+        } else {
+            defaultVerifier.verify(hostname, session)
+        }
     }
     if(!newUrl.contains("https")) newUrl = newUrl.replace("http", "https")
     return newUrl;

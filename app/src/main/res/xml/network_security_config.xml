@@ -8,7 +8,7 @@
             <certificates src="@raw/server"/>
         </trust-anchors>
     </domain-config>
-    <base-config cleartextTrafficPermitted="true">
+    <base-config cleartextTrafficPermitted="false">
         <trust-anchors>
             <certificates src="system" />
         </trust-anchors>
