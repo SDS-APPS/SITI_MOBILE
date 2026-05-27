@@ -88,7 +88,7 @@
                 android:layout_width="@dimen/watermark_width"
                 android:layout_height="@dimen/watermark_width"
                 android:layout_marginStart="@dimen/margin_horizontal_info_live"
-                android:alpha="0.30"
+                android:alpha="1"
                 android:background="@drawable/icon_launcher"
                 android:translationZ="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"

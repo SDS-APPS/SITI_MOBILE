@@ -8,7 +8,12 @@ import com.siti.mobilesds.Model.RetroFit.Login;
 import com.siti.mobilesds.Model.advertisment.AdvertismentResponse;
 import com.siti.mobilesds.Model.app_update.AppUpdateResponse;
 import com.siti.mobilesds.mvvm.common.data.AreaCodeResponse;
+import com.siti.mobilesds.mvvm.common.data.BoxModel;
+import com.siti.mobilesds.mvvm.common.data.InfoModel;
 import com.siti.mobilesds.mvvm.common.data.ParkingChannelsResponse;
+import com.siti.mobilesds.mvvm.common.data.ReleaseDateModel;
+import com.siti.mobilesds.mvvm.common.data.UserAgentModel;
+import com.siti.mobilesds.mvvm.common.data.UserVerificationModel;
 import com.siti.mobilesds.mvvm.common.data.models.CatchupChannelsResponse;
 import com.siti.mobilesds.mvvm.common.data.post.OnlineCustomerRequest;
 import com.siti.mobilesds.network.engineering.EngineeringResponse;
@@ -84,5 +89,25 @@ public interface ApiInterface {
     @Headers("Content-Type: application/json")
     @GET("getareacode")
     Call<AreaCodeResponse> getAreaCode(@Header("Authorization") String authorization);
+
+    @Headers("Content-Type: application/json")
+    @GET("getgeneralsettings/info")
+    Call<InfoModel> getInfo(@Header("Authorization") String authorization);
+
+    @Headers("Content-Type: application/json")
+    @GET("getUserAgent")
+    Call<UserAgentModel> getUserAgent(@Header("Authorization") String authorization);
+
+    @Headers("Content-Type: application/json")
+    @GET("getUserVerification")
+    Call<UserVerificationModel> getUserVerification(@Header("Authorization") String authorization);
+
+    @Headers("Content-Type: application/json")
+    @GET("getAppReleaseDate")
+    Call<ReleaseDateModel> getReleaseDate(@Header("Authorization") String authorization);
+
+    @Headers("Content-Type: application/json")
+    @GET("getboxmodel")
+    Call<BoxModel> getBoxModel(@Header("Authorization") String authorization);
 
 }

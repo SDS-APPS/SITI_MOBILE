@@ -268,6 +268,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/stbModel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -294,10 +295,10 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/networkId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1"
                     android:textColor="@color/white"
                     android:fontFamily="@font/inter_bold"
                     android:textSize="16dp" />
@@ -321,10 +322,10 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/networkName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="SITI-IPTV"
                     android:textColor="@color/white"
                     android:fontFamily="@font/inter_bold"
                     android:textSize="16dp" />
@@ -348,13 +349,13 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/drmId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/drm_id_number"
                     android:textColor="@color/white"
                     android:fontFamily="@font/inter_bold"
-                    android:textSize="16dp"></TextView>
+                    android:textSize="16dp"/>
 
             </LinearLayout>
 
@@ -375,10 +376,10 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/drmVersion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/drm_version_value"
                     android:textColor="@color/white"
                     android:fontFamily="@font/inter_bold"
                     android:textSize="16dp" />

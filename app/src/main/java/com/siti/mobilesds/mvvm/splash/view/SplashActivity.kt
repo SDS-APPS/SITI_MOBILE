@@ -1,6 +1,7 @@
 package com.siti.mobilesds.mvvm.splash.view
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.ComponentName
@@ -93,6 +94,9 @@ import com.siti.mobilesds.network.main.UpdateLocalDB
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 import com.jakewharton.threetenabp.AndroidThreeTen
+import com.siti.mobilesds.Utils.KEY_EXP_DATE
+import com.siti.mobilesds.Utils.SERVER_LOCAL_IP_LOGIN
+import com.siti.mobilesds.mvvm.common.data.UserVerificationModel
 import io.ktor.util.InternalAPI
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -116,6 +120,7 @@ class SplashActivity : AppCompatActivity() {
 
     private lateinit var dbHelper : DBHelper
     private lateinit var dbHelperKt : DBHelperKt
+    private lateinit var apiInterface: ApiInterface
 
     val requestPermissionLauncher =
         registerForActivityResult(
@@ -198,6 +203,8 @@ class SplashActivity : AppCompatActivity() {
        // disableLauncher()
         requestPermissionBootUp()
         AndroidThreeTen.init(this)
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
+        apiInterface = RetrofitClient.getClient(mPreferences.getString(KEY_SERVER_IP, SERVER_LOCAL_IP_LOGIN)).create(ApiInterface::class.java)
 
 
         val decorView = window.decorView
@@ -225,8 +232,12 @@ class SplashActivity : AppCompatActivity() {
         btnUpdate = findViewById(R.id.btnUpdate)
         containerAppUpdate = findViewById(R.id.containerAppUpdate)
         AnalyticsEventsHelper().eventAppOpen()
-
-        requestUpdate()
+        val token = mPreferences.getString(KEY_AUTH_TOKEN, PREFERENCES_STRING_DEFAULT_VALUE)
+        if (token != null && token != PREFERENCES_STRING_DEFAULT_VALUE) {
+            userVerificationApi()
+        } else {
+            startProcessToLogin()
+        }
 //        startProcessToLogin()
         Log.i(TAG, "Density: ${resources.displayMetrics.densityDpi}")
 
@@ -237,6 +248,46 @@ class SplashActivity : AppCompatActivity() {
 //        generator.startTransmittingDigits(userId.toString()); // Digits
 // generator.startTransmittingDigits("012")
 
+    }
+    private fun userVerificationApi(){
+        val token = mPreferences.getString(KEY_AUTH_TOKEN, PREFERENCES_STRING_DEFAULT_VALUE)
+        val status = apiInterface.getUserVerification("Bearer $token")
+        status.enqueue(object : Callback<UserVerificationModel> {
+            @SuppressLint("CommitPrefEdits")
+            override fun onResponse(
+                call: Call<UserVerificationModel>,
+                response: Response<UserVerificationModel>
+            ) {
+                if (response.code() == 200) {
+                    if (response.body()?.status == "Success") {
+                        mPreferences.edit().putString(KEY_EXP_DATE, response.body()?.data?.exp_date.toString())
+                        println("print exp_date -->"+response.body()?.data?.exp_date)
+                        requestUpdate()
+                    }
+                } else if (response.code() == 400) {
+                    logOut()
+                } else if (response.code() == 401) {
+                    println("print 401")
+                    try {
+                        val errorString = response.errorBody()?.string()
+                        if (!errorString.isNullOrEmpty()) {
+                            val jsonObject = JSONObject(errorString)
+                            val status = jsonObject.optString("status")
+                            if (status == "blocklisted") {
+                                logOut()
+                                Toast.makeText(this@SplashActivity, "User in blacklist", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<UserVerificationModel>, t: Throwable) {
+                Log.w(TAG, "onFailure : " + t.message)
+            }
+        })
     }
 
     private fun requestUpdate(){

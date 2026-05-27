@@ -36,6 +36,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.media3.common.util.Log
@@ -49,6 +50,7 @@ import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
 import com.siti.mobilesds.BuildConfig
 import com.siti.mobilesds.FrequencyGenerator
+import com.siti.mobilesds.Interface.ApiInterface
 import com.siti.mobilesds.Model.JoinData.JoinLiveStreams
 import com.siti.mobilesds.Model.RetroFit.ProgramsAllChannelsModel
 import com.siti.mobilesds.Model.Room.RM_LiveStreamCategory
@@ -73,17 +75,25 @@ import com.siti.mobilesds.Utils.ChannelSelectedCallback
 import com.siti.mobilesds.Utils.Crypto
 import com.siti.mobilesds.Utils.Helper
 import com.siti.mobilesds.Utils.HelperCategoryFocus
+import com.siti.mobilesds.Utils.KEY_AUTH_TOKEN
 import com.siti.mobilesds.Utils.KEY_BOOTUP_ACTIVITY
 import com.siti.mobilesds.Utils.KEY_EXP_DATE
+import com.siti.mobilesds.Utils.KEY_SERVER_IP
 import com.siti.mobilesds.Utils.KEY_USER_ID
 import com.siti.mobilesds.Utils.LatencyHelper
 import com.siti.mobilesds.Utils.NumberPressedUtil
+import com.siti.mobilesds.Utils.PREFERENCES_STRING_DEFAULT_VALUE
+import com.siti.mobilesds.Utils.RetrofitClient
 import com.siti.mobilesds.Utils.ServerChecker
 import com.siti.mobilesds.Utils.SocketHelper
 import com.siti.mobilesds.Utils.SocketSingleton
 import com.siti.mobilesds.Utils.VALUE_FULL_SCREEN_ACTIVITY
 import com.siti.mobilesds.Utils.changeLocalToGlobalIfRequired
 import com.siti.mobilesds.databinding.ActivityVideoPlayerBinding
+import com.siti.mobilesds.mvvm.common.data.BoxModel
+import com.siti.mobilesds.mvvm.common.data.InfoModel
+import com.siti.mobilesds.mvvm.common.data.ReleaseDateModel
+import com.siti.mobilesds.mvvm.common.data.UserAgentModel
 import com.siti.mobilesds.mvvm.common.data.programs.Program
 import com.siti.mobilesds.mvvm.config.helpers.ConfigurationHelper
 import com.siti.mobilesds.mvvm.fullscreen.view.adapters.CategoriesAdapter
@@ -103,6 +113,9 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -208,6 +221,7 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
         const val SOURCE_RECENT = 4
 
         var lastNavigatedSource = SOURCE_ALL
+        var AgentName = ""
     }
 
     private lateinit var serverChecker: ServerChecker
@@ -237,6 +251,9 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
     private var lastPlayedCategoryIndex = 0
     private val PREF_TUTORIAL = "pref_tutorial"
     private val KEY_TUTORIAL_SHOWN = "tutorial_shown"
+    private lateinit var authToken: String
+    private lateinit var apiInterface: ApiInterface
+    private var isUpdateRequired = false
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -247,6 +264,11 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
         binding.containerTutorial.visibility = View.VISIBLE
         supportActionBar?.hide()
         binding.player.useController = false
+        authToken = mPreferences.getString(KEY_AUTH_TOKEN, PREFERENCES_STRING_DEFAULT_VALUE)!!
+        val serverIp = mPreferences.getString(KEY_SERVER_IP, PREFERENCES_STRING_DEFAULT_VALUE)
+        apiInterface = RetrofitClient.getClient(serverIp).create(ApiInterface::class.java)
+        releaseDateApi()
+        userAgentApi()
         setContentView(binding.root)
         initCustomControllerViews()
         initSurfaceComponents()
@@ -257,7 +279,8 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
         setInfoValues()
         onClick()
         isAllChannelScreenOpen = true
-
+        infoApi()
+        boxModelApi()
         val expDate = mPreferences.getString(KEY_EXP_DATE, "")
 
         finalExpiryDate = Helper.daysRemaining(expDate)
@@ -504,6 +527,162 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
 
     }
 
+    private fun releaseDateApi() {
+        val status = apiInterface.getReleaseDate("Bearer $authToken")
+        status.enqueue(object : Callback<ReleaseDateModel> {
+            override fun onResponse(
+                call: Call<ReleaseDateModel>,
+                response: Response<ReleaseDateModel>
+            ) {
+                if (response.code() == 200) {
+                    if (response.body()?.status == "Success") {
+                        val releaseDate = response.body()?.data?.date
+                        println("print release date -> $releaseDate")
+                        if (releaseDate != null) {
+                            checkAppExpiryDate(releaseDate)
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ReleaseDateModel>, t: Throwable) {
+                println("print onFailure -->"+t.message)
+            }
+        })
+    }
+    private fun checkAppExpiryDate(releaseDateStr: String) {
+        try {
+            val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+            val releaseDateObj = sdf.parse(releaseDateStr)
+
+            val currentDateStr = sdf.format(Date())
+            val currentDateObj = sdf.parse(currentDateStr)
+
+            if (releaseDateObj != null && releaseDateObj.before(currentDateObj)) {
+                showUpdateAppDialog()
+            } else {
+                println("App is up-to-date. Normal playback will continue.")
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun showUpdateAppDialog() {
+        isUpdateRequired = true
+
+        try {
+            exoPlayer?.stop()
+            exoPlayer?.clearMediaItems()
+            binding.player.player?.stop()
+
+            mediaPlayer?.stop()
+            mediaPlayer?.reset()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        releasePlayer("App Update Required")
+
+        exoPlayer?.stop()
+
+        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        builder.setTitle("Update Required")
+        builder.setMessage("Please update your app from Play Store.")
+        builder.setCancelable(false)
+
+        builder.setPositiveButton("UPDATE APP") { _, _ ->
+            val appPackageName = packageName
+
+            try {
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    "market://details?id=$appPackageName".toUri()
+                )
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            } catch (e: android.content.ActivityNotFoundException) {
+                e.printStackTrace()
+            }
+
+            finishAffinity()
+            exitProcess(0)
+        }
+
+        builder.show()
+    }
+    private fun userAgentApi() {
+        val status = apiInterface.getUserAgent("Bearer $authToken")
+        status.enqueue(object : Callback<UserAgentModel> {
+            override fun onResponse(
+                call: Call<UserAgentModel>,
+                response: Response<UserAgentModel>
+            ) {
+                if (response.code() == 200) {
+                    if (response.body()?.status == "Success") {
+                        AgentName = response.body()?.data?.agent_name.toString()
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<UserAgentModel>, t: Throwable) {
+                println("print onFailure -->${t.message}")
+            }
+        })
+    }
+    private fun infoApi() {
+        val status = apiInterface.getInfo("Bearer $authToken")
+        status.enqueue(object : Callback<InfoModel> {
+            override fun onResponse(
+                call: Call<InfoModel>,
+                response: Response<InfoModel>
+            ) {
+                if (response.code() == 200) {
+                    if (response.body()?.status == "Success") {
+
+                        val dataList = response.body()?.data
+
+                        if (dataList != null) {
+                            val networkName = dataList.find { it.dataKey == "networkName" }?.value
+                            val networkId = dataList.find { it.dataKey == "networkId" }?.value
+                            val drmId = dataList.find { it.dataKey == "drmId" }?.value
+                            val drmVersion = dataList.find { it.dataKey == "softwareVersion" }?.value
+
+                            binding.includeInfoDialog.networkName.text = networkName
+                            binding.includeInfoDialog.networkId.text = networkId
+                            binding.includeInfoDialog.drmId.text = drmId
+                            binding.includeInfoDialog.drmVersion.text = drmVersion
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<InfoModel>, t: Throwable) {
+                println("print onFailure -->${t.message}")
+            }
+        })
+    }
+
+    private fun boxModelApi() {
+        val status = apiInterface.getBoxModel("Bearer $authToken");
+        status.enqueue(object : Callback<BoxModel> {
+            override fun onResponse(
+                call: Call<BoxModel>,
+                response: Response<BoxModel>
+            ) {
+                if (response.code() == 200) {
+                    if (response.body()?.status == "Success") {
+                        binding.includeInfoDialog.stbModel.text = response.body()!!.data.model
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<BoxModel>, t: Throwable) {
+                println("print onFailure -->${t.message}")
+            }
+
+        })
+    }
+
     private fun handleRightNavigation() {
 
         if (previewScreenViewModel.currentChannel.value?.catch_up == 1) return
@@ -682,6 +861,7 @@ class PlayerScreen : SocketHelper(), SurfaceHolder.Callback, PlayerFrozenFrame {
     }
 
     private fun playPreview(channel: JoinLiveStreams) {
+        if (isUpdateRequired) return
         if (channel.source == null) {
             return
         }

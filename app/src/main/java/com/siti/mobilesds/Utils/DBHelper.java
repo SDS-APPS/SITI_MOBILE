@@ -102,7 +102,6 @@ public class DBHelper {
                 }
 
                 String encryptedSource = liveStream.getEncryptedSource();
-                System.out.println("print encryptedSource DBHelper: " + encryptedSource);
                 if(encryptedSource != null){
 //                    streams.setEncryptedSource(encryptedSource);
 //                    streams.setSource(Crypto.decryptCBC(encryptedSource));

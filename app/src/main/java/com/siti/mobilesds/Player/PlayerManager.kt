@@ -101,6 +101,7 @@ import androidx.media3.exoplayer.source.BehindLiveWindowException
 import androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy
 import androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy
 import com.siti.mobilesds.Utils.SERVER_LOCAL_IP_SOCKET
+import com.siti.mobilesds.mvvm.fullscreen.view.PlayerScreen.Companion.AgentName
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -121,6 +122,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
 
 
     private var mPreferences: SharedPreferences
+    private var exoPlayerJob: Job? = null
 
     //   var fakeUri : Uri
 
@@ -241,7 +243,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         return Uri.parse(nuevaUrl);
     }
 
-    private val licenseUrl = "https://drm-widevine-licensing.axprod.net/AcquireLicense"
+    private val licenseUrl = "https://iptv.e-net.in/AcquireLicense/"
 //    private val licenseUrl = "https://drm-widevine-licensing.axprod.net/AcquireLicense"
 //    private val jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjogMSwKImJlZ2luX2RhdGUiOiAiMjAwMC0wMS0wMVQxMzoxMzo1MSswMzowMCIsCiJleHBpcmF0aW9uX2RhdGUiOiAiMjAyNS0xMi0zMVQyMzo1OTo0MCswMzowMCIsCiJjb21fa2V5X2lkIjogIjkzYWVjNGNjLWU0YWMtNDRmZC1iMjhmLWIxMDIwMGM0NWM3MCIsCiJtZXNzYWdlIjogewogICJ0eXBlIjogImVudGl0bGVtZW50X21lc3NhZ2UiLAogICJ2ZXJzaW9uIjogMiwKICAibGljZW5zZSI6IHsKICAgICJkdXJhdGlvbiI6IDM2MDAKICB9LAogICJjb250ZW50X2tleXNfc291cmNlIjogewogICAgImlubGluZSI6IFsKICAgICAgewogICAgICAgICJpZCI6ICJjMGUxZTJjMS0xN2VlLWM4NWUtYWM3NS1mOWZhYzYyMWJkZmMiCiAgICAgIH0KICAgIF0KICB9Cn19.3ik-MQSxc_HPXNFY3lQYvfhoUmjJzg3B62OjRK1EUh8"
 //    private val jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjogMSwKImJlZ2luX2RhdGUiOiAiMjAwMC0wMS0wMVQyMzo0NzowMyswMzowMCIsCiJleHBpcmF0aW9uX2RhdGUiOiAiMjAyNS0xMi0zMVQyMzo1OTo0MCswMzowMCIsCiJjb21fa2V5X2lkIjogIjkzYWVjNGNjLWU0YWMtNDRmZC1iMjhmLWIxMDIwMGM0NWM3MCIsCiJtZXNzYWdlIjogewogICJ0eXBlIjogImVudGl0bGVtZW50X21lc3NhZ2UiLAogICJ2ZXJzaW9uIjogMiwKICAibGljZW5zZSI6IHsKICAgICJkdXJhdGlvbiI6IDM2MDAsCiAgICAiYWxsb3dfcGVyc2lzdGVuY2UiOiB0cnVlCiAgfSwKICAiY29udGVudF9rZXlzX3NvdXJjZSI6IHsKICAgICJpbmxpbmUiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAiYzBlMWUyYzEtMTdlZS1jODVlLWFjNzUtZjlmYWM2MjFiZGZjIgogICAgICB9CiAgICBdCiAgfQp9fQ.bsd7K00DhjHfAR-RyQjksgGU8JjpaQjdcRSDrlGahxA"
@@ -324,7 +326,7 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
     suspend fun ensureLicenseSavedIfNeeded(mediaUrl: String, token : String) {
         val keySetId = loadLicenseKey(context, mediaUrl)
 
-        val userAgent = Util.getUserAgent(context, "MiAppExoPlayer")
+        val userAgent = Util.getUserAgent(context, AgentName)
         val httpDataSourceFactory = DefaultHttpDataSource.Factory().setUserAgent(userAgent)
         val drmCallback = HttpMediaDrmCallback(licenseUrl, httpDataSourceFactory)
 
@@ -371,55 +373,19 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         token : String?
     ) {
 
-        token?.let {
-            if(token.isNotEmpty()){
-                CoroutineScope(Dispatchers.IO).launch {
-                    ensureLicenseSavedIfNeeded(url, token)
-                }
-            }
-
-        }
-
-        val loadErrorHandlingPolicy = object :
-            DefaultLoadErrorHandlingPolicy() {
-            override fun getRetryDelayMsFor(loadErrorInfo: LoadErrorHandlingPolicy.LoadErrorInfo): Long {
-                if (loadErrorInfo.exception is BehindLiveWindowException) {
-                    return C.TIME_UNSET
-                }
-                return super.getRetryDelayMsFor(loadErrorInfo)
-            }
-        }
+//        println("print token -->"+token)
 
         currentPlayer = PlayerType.EXOPLAYER
 //        JavaHelper.disableSSLCertificateVerify()
 
         val defaultVerifier = HttpsURLConnection.getDefaultHostnameVerifier()
         HttpsURLConnection.setDefaultHostnameVerifier { hostname, session ->
-            if (hostname == SERVER_LOCAL_IP_SOCKET) {
+            if (hostname == "103.117.46.100" || hostname == "iptv.e-net.in") {
                 true
             } else {
                 defaultVerifier.verify(hostname, session)
             }
         }
-
-        val extractorsFactory = DefaultExtractorsFactory().setConstantBitrateSeekingEnabled(true)
-            .setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_ALLOW_NON_IDR_KEYFRAMES)
-
-        val userAgent = Util.getUserAgent(context, "MiAppExoPlayer")
-
-        val defaultHttpFactory = DefaultHttpDataSource.Factory()
-            .setUserAgent(userAgent)
-            .setConnectTimeoutMs(1000)
-            .setReadTimeoutMs(1000)
-            .setAllowCrossProtocolRedirects(true)
-            .setDefaultRequestProperties(
-                mapOf(
-                    "Referer" to "https://103.187.78.90/",
-                    "Origin" to "https://103.187.78.90/"
-                )
-            )
-
-        val dataSourceFactory: DataSource.Factory = defaultHttpFactory
 
         var newUrl = url
         if (url.contains("catchup")) {
@@ -428,84 +394,64 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         }
 
         val uri = Uri.parse(newUrl)
-//        val uri = Uri.parse("https://115.187.52.252/sdscoder1/NKTVPLUS/index.mpd")
-
-        val drmSchemeUuid = C.WIDEVINE_UUID
         val type = Util.inferContentType(uri)
-        var mediaSource: MediaSource? = null
-        val mediaItemBuilder = MediaItem.Builder().setUri(uri)
+        exoPlayerJob?.cancel()
+        exoPlayerJob = CoroutineScope(Dispatchers.Main).launch {
+            var persistentKeySetId: ByteArray? = null
 
-        if (type == C.TYPE_DASH) {
+            if (type == C.TYPE_DASH && !token.isNullOrEmpty()) {
+                persistentKeySetId = getOrDownloadOfflineLicense(newUrl, token)
+            }
 
-
-            val chunkSourceFactory = DefaultDashChunkSource.Factory(dataSourceFactory)
-            val dashFactory = DashMediaSource.Factory(chunkSourceFactory, dataSourceFactory)
-
-            val savedKeySetId = loadLicenseKey(context, uri.toString())
-            val drmBuilder = MediaItem.DrmConfiguration.Builder(drmSchemeUuid)
-                .setLicenseUri(licenseUrl)
+            val drmBuilder = MediaItem.DrmConfiguration.Builder(C.WIDEVINE_UUID)
                 .setMultiSession(false)
 
-            savedKeySetId?.let {
-                drmBuilder.setKeySetId(it)
-            }
-
-            val mediaItem = mediaItemBuilder.setDrmConfiguration(drmBuilder.build()).build()
-
-            if(token?.isNotEmpty() == true) {
-                mediaSource = dashFactory
-                    .setDrmSessionManagerProvider(
-                        CustomDRMSessionManagerProvider(userAgent, licenseUrl, token)
-                    )
-                    .createMediaSource(mediaItem)
-            }else{
-                mediaSource = dashFactory
-                    .createMediaSource(mediaItem)
-            }
-
-        } else if (type == C.TYPE_HLS) {
-            val hlsFactory = HlsMediaSource.Factory(dataSourceFactory)
-                .setLoadErrorHandlingPolicy(loadErrorHandlingPolicy)
-            mediaSource = hlsFactory.createMediaSource(mediaItemBuilder.build())
-        }
-
-        if (mediaSource == null) {
-            when (type) {
-                C.TYPE_SS -> Log.i(TAG, "onStart: type ss")
-                C.TYPE_HLS -> Log.i(TAG, "onStart: type hls")
-                C.TYPE_OTHER -> {
-                    Log.i(TAG, "onStart: type other")
-                    mediaSource = ProgressiveMediaSource.Factory(dataSourceFactory, extractorsFactory)
-                        .createMediaSource(mediaItemBuilder.build())
+            if (persistentKeySetId != null) {
+                Log.w(TAG, "Applying persistent KeySetId to MediaItem")
+                drmBuilder.setKeySetId(persistentKeySetId)
+            } else {
+                drmBuilder.setLicenseUri(licenseUrl)
+                if (!token.isNullOrEmpty()) {
+                    drmBuilder.setLicenseRequestHeaders(mapOf("X-AxDRM-Message" to token))
                 }
             }
+
+            val mediaItem = MediaItem.Builder()
+                .setUri(uri)
+                .setDrmConfiguration(drmBuilder.build())
+                .build()
+            val userAgent = Util.getUserAgent(context, AgentName)
+            val defaultHttpFactory = DefaultHttpDataSource.Factory()
+                .setUserAgent(userAgent)
+                .setDefaultRequestProperties(
+                    mapOf("Referer" to "https://iptv.e-net.in", "Origin" to "https://iptv.e-net.in")
+                )
+
+            val extractorsFactory = DefaultExtractorsFactory().setConstantBitrateSeekingEnabled(true)
+                .setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_ALLOW_NON_IDR_KEYFRAMES)
+
+            var mediaSource: MediaSource? = null
+
+            if (type == C.TYPE_DASH) {
+                val chunkSourceFactory = DefaultDashChunkSource.Factory(defaultHttpFactory)
+                val dashFactory = DashMediaSource.Factory(chunkSourceFactory, defaultHttpFactory)
+
+                mediaSource = dashFactory.createMediaSource(mediaItem)
+            } else {
+                mediaSource = ProgressiveMediaSource.Factory(defaultHttpFactory, extractorsFactory)
+                    .createMediaSource(mediaItem)
+            }
+
+            mediaSource.let { source ->
+                player.playWhenReady = playWhenReady
+                player.setMediaSource(source, false)
+                player.setWakeMode(C.WAKE_MODE_LOCAL)
+                player.prepare()
+            }
+
+            val ratio = mPreferences.getInt("ASPECT_RATIO", 3)
+            setRatio(playerView, player, ratio)
         }
-
-        mediaSource?.let { source ->
-
-            player.addListener(object : Player.Listener {
-                override fun onPlayerError(error: PlaybackException) {
-                    println(" --> error 1")
-                    var cause: Throwable? = error
-                    while (cause != null) {
-                        if (cause is BehindLiveWindowException) {
-                            player.seekToDefaultPosition()
-                            player.prepare()
-                            player.play()
-                            break
-                        }
-                        cause = cause.cause
-                    }
-                }
-            })
-            player.playWhenReady = playWhenReady
-            player.setMediaSource(source, false)
-            player.setWakeMode(C.WAKE_MODE_LOCAL)
-            player.prepare()
-        }
-
-        val ratio = mPreferences.getInt("ASPECT_RATIO", 3)
-        setRatio(playerView, player, ratio)
     }
 
 
@@ -1326,5 +1272,69 @@ class PlayerManager @Inject constructor(@ApplicationContext private val context:
         }
     }
 
+    @OptIn(UnstableApi::class)
+    suspend fun getOrDownloadOfflineLicense(mediaUrl: String, token: String): ByteArray? {
+        return withContext(Dispatchers.IO) {
+            val existingKey = loadLicenseKey(context, mediaUrl)
+
+            val userAgent = Util.getUserAgent(context, AgentName)
+            val httpDataSourceFactory = DefaultHttpDataSource.Factory().setUserAgent(userAgent)
+            val drmCallback = HttpMediaDrmCallback(licenseUrl, httpDataSourceFactory)
+            drmCallback.setKeyRequestProperty("X-AxDRM-Message", token)
+
+            val drmSessionManager = DefaultDrmSessionManager.Builder()
+                .setUuidAndExoMediaDrmProvider(C.WIDEVINE_UUID) {
+                    FrameworkMediaDrm.newInstance(C.WIDEVINE_UUID)
+                }
+                .build(drmCallback)
+
+            val licenseHelper = OfflineLicenseHelper(drmSessionManager, DrmSessionEventListener.EventDispatcher())
+
+            try {
+                if (existingKey != null) {
+                    val remainingTime = licenseHelper.getLicenseDurationRemainingSec(existingKey).first
+                    if (remainingTime > 60) {
+                        Log.w(TAG, "Offline license --> valid.")
+                        return@withContext existingKey
+                    } else {
+                        Log.w(TAG, "Offline license --> expired.")
+                        licenseHelper.releaseLicense(existingKey)
+                    }
+                }
+
+                Log.w(TAG, "Downloading new Offline License for: $mediaUrl")
+                val mpdContent = fetchMpdContent(mediaUrl)
+                if (mpdContent == null) {
+                    Log.e(TAG, "Failed to fetch MPD content")
+                    return@withContext null
+                }
+
+                val pssh = extractPsshFromMpd(mpdContent)
+                if (pssh == null) {
+                    Log.e(TAG, "Failed to extract PSSH from MPD")
+                    return@withContext null
+                }
+
+                val schemeData = DrmInitData.SchemeData(C.WIDEVINE_UUID, licenseUrl, MimeTypes.VIDEO_MP4, pssh)
+                val format = Format.Builder()
+                    .setId("video-track")
+                    .setSampleMimeType(MimeTypes.VIDEO_H264)
+                    .setContainerMimeType(MimeTypes.VIDEO_MP4)
+                    .setDrmInitData(DrmInitData(schemeData))
+                    .build()
+
+                val newKeySetId = licenseHelper.downloadLicense(format)
+                saveLicenseKey(context, mediaUrl, newKeySetId)
+                Log.w(TAG, "New license downloaded and saved successfully!")
+                return@withContext newKeySetId
+
+            } catch (e: Exception) {
+                Log.e(TAG, "DRM License Error: ${e.message}")
+                return@withContext null
+            } finally {
+                licenseHelper.release()
+            }
+        }
+    }
 
 }
