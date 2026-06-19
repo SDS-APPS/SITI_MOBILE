@@ -204,8 +204,19 @@ class SplashActivity : AppCompatActivity() {
         requestPermissionBootUp()
         AndroidThreeTen.init(this)
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
-        apiInterface = RetrofitClient.getClient(mPreferences.getString(KEY_SERVER_IP, SERVER_LOCAL_IP_LOGIN)).create(ApiInterface::class.java)
+//        apiInterface = RetrofitClient.getClient(mPreferences.getString(KEY_SERVER_IP, SERVER_LOCAL_IP_LOGIN)).create(ApiInterface::class.java)
 
+        var serverIp = mPreferences.getString(KEY_SERVER_IP, SERVER_LOCAL_IP_LOGIN) ?: SERVER_LOCAL_IP_LOGIN
+
+        if (serverIp == PREFERENCES_STRING_DEFAULT_VALUE || serverIp.trim().isEmpty() || serverIp == "null") {
+            serverIp = SERVER_LOCAL_IP_LOGIN
+        }
+
+        if (!serverIp.startsWith("http://") && !serverIp.startsWith("https://")) {
+            serverIp = "http://$serverIp"
+        }
+        println("print server Ip -->$serverIp")
+        apiInterface = RetrofitClient.getClient(serverIp).create(ApiInterface::class.java)
 
         val decorView = window.decorView
         val uiOptions = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
